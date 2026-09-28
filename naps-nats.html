@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>NAPS/NATS Apprenticeship Management Services — KS Workforce Solutions, New Delhi</title>
+<meta name="description" content="Employer registration, candidate registration, NAPS/NATS onboarding, document verification, attendance and payroll inputs, and monthly process coordination — full apprenticeship management by KS Workforce Solutions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.naps-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.naps-card{background:var(--surface);border:1px solid var(--bdr);border-radius:16px;padding:26px 22px;transition:box-shadow .25s cubic-bezier(.2,.8,.2,1),transform .25s cubic-bezier(.2,.8,.2,1),border-color .25s;box-shadow:0 2px 10px rgba(14,56,48,.05)}
+.naps-card:hover{box-shadow:0 16px 36px rgba(14,56,48,.14);transform:translateY(-4px);border-color:transparent}
+.naps-num{width:38px;height:38px;border-radius:10px;background:var(--acc-l);color:var(--accent);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:.95rem;margin-bottom:14px}
+.naps-title{font-family:'Fraunces',Georgia,serif;font-size:.97rem;font-weight:600;color:var(--text);margin-bottom:7px}
+.naps-desc{font-size:.82rem;color:var(--t2);line-height:1.65}
+.naps-why{background:var(--navy-d);padding-block:clamp(52px,6vw,80px);position:relative;overflow:hidden}
+.naps-why::before{content:'';position:absolute;top:-40%;right:-10%;width:50%;height:180%;background:radial-gradient(ellipse,rgba(31,107,74,.35) 0%,transparent 65%);pointer-events:none}
+.naps-why-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.naps-why-list{display:flex;flex-direction:column;gap:18px}
+.naps-why-item{display:flex;gap:14px;align-items:flex-start}
+.nwi-icon{width:34px;height:34px;flex-shrink:0;background:rgba(255,255,255,.08);border-radius:9px;display:flex;align-items:center;justify-content:center}
+.nwi-icon svg{width:17px;height:17px;stroke:#8BE0BA;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.nwi-title{font-size:.9rem;font-weight:600;color:#fff;margin-bottom:3px}
+.nwi-desc{font-size:.8rem;color:rgba(212,226,252,.62);line-height:1.6}
+.naps-process{background:var(--navy-l);padding-block:clamp(52px,6vw,80px)}
+.np-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative}
+.np-steps::before{content:'';position:absolute;top:32px;left:calc(12.5% + 14px);right:calc(12.5% + 14px);height:2px;background:linear-gradient(90deg,var(--accent),var(--gold),var(--accent));opacity:.35;z-index:0}
+.np-step{position:relative;z-index:1;text-align:center}
+.np-num{width:64px;height:64px;background:var(--surface);border:2px solid var(--bdr);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-family:'Fraunces',Georgia,serif;font-size:1.25rem;font-weight:700;color:var(--navy);box-shadow:0 4px 14px rgba(14,56,48,.08);transition:all .25s cubic-bezier(.2,.8,.2,1)}
+.np-step:hover .np-num{background:linear-gradient(135deg,var(--accent),var(--navy));border-color:transparent;color:#fff;transform:translateY(-4px) scale(1.05);box-shadow:0 12px 28px rgba(14,56,48,.24)}
+.np-title{font-family:'Fraunces',Georgia,serif;font-size:.96rem;font-weight:600;color:var(--text);margin-bottom:7px}
+.np-desc{font-size:.8rem;color:var(--t2);line-height:1.6}
+@media(max-width:960px){.naps-cards{grid-template-columns:1fr 1fr}.naps-why-inner{grid-template-columns:1fr}.np-steps{grid-template-columns:1fr 1fr;gap:20px}.np-steps::before{display:none}}
+@media(max-width:600px){.naps-cards{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo.png" class="nav-logo-img" alt="KS Workforce Solutions" width="36" height="36">
+        <div class="logo-name">KS Workforce Solutions<span>New Delhi · Workforce · HR · Technology</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="manpower.html">Manpower</a></li>
+        <li><a href="technology.html">IT Services</a></li>
+        <li><a href="hr.html">HR</a></li>
+        <li><a href="industries.html">Industries</a></li>
+        <li><a href="naps-nats.html" class="active">NAPS/NATS</a></li>
+        <li><a href="locations.html">Locations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="tel:+919650346244" class="nav-cta">+91 96503 46244</a></li>
+      </ul>
+      <button class="ham" id="ham"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mob-nav" id="mobNav">
+    <a href="manpower.html">Manpower</a><a href="technology.html">IT Services</a><a href="hr.html">HR</a>
+    <a href="industries.html">Industries</a><a href="naps-nats.html">NAPS/NATS</a><a href="locations.html">Locations</a><a href="contact.html">Contact</a>
+    <a href="tel:+919650346244" class="mob-cta">Call: +91 96503 46244</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-grid"></div>
+  <img src="assets/logo.png" class="hero-logo-mark" alt="" aria-hidden="true">
+  <div class="container page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span>NAPS/NATS Services</span></div>
+    <div class="page-hero-badge">NAPS / NATS Services</div>
+    <h1>Apprenticeship Management <em>Made Simple</em></h1>
+    <p>We handle the full apprenticeship lifecycle under the National Apprenticeship Promotion Scheme (NAPS) and National Apprenticeship Training Scheme (NATS) — registration, onboarding, documentation, and monthly compliance — so your team doesn't have to.</p>
+    <div class="ph-btns">
+      <a href="contact.html" class="btn btn-acc">Talk to Our Team</a>
+      <a href="tel:+919650346244" class="btn btn-ghost">Call +91 96503 46244</a>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="sec-hd reveal">
+      <div class="label">We Support Organizations With</div>
+      <h2 class="heading sec-title">End-to-End NAPS/NATS Coordination</h2>
+      <p class="sec-sub">From first registration to monthly payroll inputs, every step of your apprenticeship program handled in one place.</p>
+    </div>
+    <div class="naps-cards">
+      <div class="naps-card"><div class="naps-num">01</div><div class="naps-title">Employer Registration Support</div><div class="naps-desc">We guide and manage your organization's registration on the NAPS/NATS portals, so you're set up correctly from day one.</div></div>
+      <div class="naps-card"><div class="naps-num">02</div><div class="naps-title">Candidate Registration</div><div class="naps-desc">Registering apprentice candidates on the relevant portals with accurate details, ready for onboarding.</div></div>
+      <div class="naps-card"><div class="naps-num">03</div><div class="naps-title">NAPS/NATS Onboarding</div><div class="naps-desc">End-to-end onboarding of apprentices into your program, aligned with scheme guidelines and timelines.</div></div>
+      <div class="naps-card"><div class="naps-num">04</div><div class="naps-title">Document Verification &amp; Management</div><div class="naps-desc">Verification and organized management of all apprentice documentation required for compliance and audits.</div></div>
+      <div class="naps-card"><div class="naps-num">05</div><div class="naps-title">Attendance Management</div><div class="naps-desc">Tracking and recording apprentice attendance accurately, month over month, for reporting and stipend calculation.</div></div>
+      <div class="naps-card"><div class="naps-num">06</div><div class="naps-title">Payroll Inputs</div><div class="naps-desc">Preparing and submitting accurate payroll inputs for apprentice stipends, in line with attendance and scheme norms.</div></div>
+      <div class="naps-card"><div class="naps-num">07</div><div class="naps-title">Monthly Process Coordination</div><div class="naps-desc">We coordinate the recurring monthly cycle — attendance, inputs, and filings — so nothing falls through the cracks.</div></div>
+      <div class="naps-card"><div class="naps-num">08</div><div class="naps-title">Apprenticeship-Related Documentation</div><div class="naps-desc">Ongoing documentation support across the apprenticeship lifecycle, kept audit-ready at all times.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY OUTSOURCE -->
+<section class="naps-why">
+  <div class="container">
+    <div class="naps-why-inner">
+      <div>
+        <div class="label label-teal">Why Outsource This</div>
+        <h2 class="heading sec-title" style="color:#fff;text-align:left">Apprenticeship Admin Is Time-Consuming — Let Us Own It</h2>
+        <p class="sec-sub" style="color:rgba(212,226,252,.68);text-align:left;margin-bottom:0">Running a compliant NAPS/NATS program month after month takes dedicated attention. We take that entire workload off your HR team's plate.</p>
+      </div>
+      <div class="naps-why-list">
+        <div class="naps-why-item"><div class="nwi-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><div class="nwi-title">Save Internal HR Bandwidth</div><div class="nwi-desc">No need to dedicate internal staff to portal registrations, attendance tracking, and monthly filings.</div></div></div>
+        <div class="naps-why-item"><div class="nwi-icon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div><div><div class="nwi-title">Fewer Errors, Fewer Delays</div><div class="nwi-desc">Accurate, timely inputs mean fewer rejected filings and faster stipend processing for your apprentices.</div></div></div>
+        <div class="naps-why-item"><div class="nwi-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><div class="nwi-title">Audit-Ready Documentation</div><div class="nwi-desc">Every document verified and organized, so you're always ready for an inspection or internal review.</div></div></div>
+        <div class="naps-why-item"><div class="nwi-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div><div class="nwi-title">One Point of Contact</div><div class="nwi-desc">A single coordinated team handling employer side, candidate side, and monthly process — instead of juggling it yourself.</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="naps-process">
+  <div class="container">
+    <div class="sec-hd reveal">
+      <div class="label">How It Works</div>
+      <h2 class="heading sec-title">From Registration to Monthly Compliance</h2>
+    </div>
+    <div class="np-steps">
+      <div class="np-step"><div class="np-num">01</div><div class="np-title">Register</div><div class="np-desc">Employer and candidate registration completed on the NAPS/NATS portals.</div></div>
+      <div class="np-step"><div class="np-num">02</div><div class="np-title">Onboard</div><div class="np-desc">Apprentices onboarded with documents verified and filed correctly.</div></div>
+      <div class="np-step"><div class="np-num">03</div><div class="np-title">Track</div><div class="np-desc">Attendance tracked monthly and payroll inputs prepared accurately.</div></div>
+      <div class="np-step"><div class="np-num">04</div><div class="np-title">Coordinate</div><div class="np-desc">Ongoing monthly coordination and documentation, kept audit-ready.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <div class="cta-content">
+      <h2 class="cta-title">Simplify Your Apprenticeship Program</h2>
+      <p class="cta-sub">Talk to our team about setting up or managing your NAPS/NATS apprenticeship process end to end.</p>
+      <div class="cta-btns">
+        <a href="contact.html" class="btn btn-wh">Get Started</a>
+        <a href="tel:+919650346244" class="btn btn-owh">Call +91 96503 46244</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="ft-grid">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px"><img src="assets/logo-light.png" class="nav-logo-img" alt="KS Workforce Solutions" width="36" height="36"><div class="ft-name">KS Workforce Solutions<span>Workforce · HR · Technology</span></div></div>
+        <p class="ft-tag">New Delhi startup delivering manpower, HR consultancy, and technology solutions across India.</p>
+        <div class="ft-contact"><a href="tel:+919650346244">📞 +91 96503 46244</a><a href="mailto:info@ksworkforcesolutions.com">✉ info@ksworkforcesolutions.com</a></div>
+      </div>
+      <div><div class="ft-col-h">Manpower</div><ul class="ft-links"><li><a href="manpower.html">IT Staffing</a></li><li><a href="manpower.html">Manufacturing</a></li><li><a href="manpower.html">Contract Staff</a></li><li><a href="manpower.html">Executive Search</a></li></ul></div>
+      <div><div class="ft-col-h">HR Services</div><ul class="ft-links"><li><a href="hr.html">HR-as-a-Service</a></li><li><a href="hr.html">Payroll</a></li><li><a href="hr.html">Compliance</a></li><li><a href="naps-nats.html">NAPS/NATS Services</a></li></ul></div>
+      <div><div class="ft-col-h">Technology</div><ul class="ft-links"><li><a href="technology.html">Website Dev</a></li><li><a href="technology.html">Custom Portals</a></li><li><a href="technology.html">IoT Platforms</a></li><li><a href="technology.html">VPN Setup</a></li></ul></div>
+      <div><div class="ft-col-h">Company</div><ul class="ft-links"><li><a href="industries.html">Industries</a></li><li><a href="locations.html">Locations</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    </div>
+    <div class="ft-bottom"><div class="ft-copy">© 2026 KS Workforce Solutions, New Delhi.</div><div class="ft-legal"><a href="contact.html">Privacy</a><a href="contact.html">Terms</a></div></div>
+  </div>
+</footer>
+<div id="progress-bar"></div>
+<script>
+const ham=document.getElementById('ham'),mob=document.getElementById('mobNav');
+ham.addEventListener('click',()=>{ham.classList.toggle('open');mob.classList.toggle('open');});
+const revObs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('revealed');revObs.unobserve(e.target);}}),{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
+const pb=document.getElementById('progress-bar');
+document.addEventListener('scroll',()=>{const h=document.documentElement;pb.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';},{passive:true});
+window.addEventListener('scroll',()=>{document.querySelector('.nav').classList.toggle('scrolled',scrollY>20);},{passive:true});
+</script>
+</body>
+</html>
