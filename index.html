@@ -12,50 +12,52 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"KS Workforce Solutions","telephone":"+919650346244","address":{"@type":"PostalAddress","addressLocality":"New Delhi","addressCountry":"IN"},"url":"https://www.ksworkforcesolutions.com"}</script>
 <style>
 /* -- HOME HERO (light, photo-style) -- */
-.hero{position:relative;background:#F7F3E7;overflow:hidden;padding-block:clamp(48px,6vw,76px);border-bottom:1px solid #E7DFC8}
+.hero{position:relative;background:#FBF7EF;overflow:hidden;padding-block:clamp(48px,6vw,76px);border-bottom:1px solid #E9DFCA}
 .hero::before{content:'';position:absolute;top:-20%;right:-10%;width:55%;height:140%;background:radial-gradient(ellipse,rgba(31,107,74,.09) 0%,transparent 65%);pointer-events:none;z-index:0}
-.hero::after{content:'';position:absolute;bottom:-30%;left:-10%;width:45%;height:120%;background:radial-gradient(ellipse,rgba(140,107,33,.07) 0%,transparent 65%);pointer-events:none;z-index:0}
+.hero::after{content:'';position:absolute;bottom:-30%;left:-10%;width:45%;height:120%;background:radial-gradient(ellipse,rgba(184,149,90,.07) 0%,transparent 65%);pointer-events:none;z-index:0}
 .hero-bg{position:absolute;inset:0;pointer-events:none}
 .hero-grid{display:none}
 .hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
 .hero-left{}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:#EDE7D3;border:1px solid #E7DFC8;color:#0E3830;font-size:.67rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:22px}
-.hero-badge::before{content:'';width:6px;height:6px;background:#1F6B4A;border-radius:50%;flex-shrink:0;animation:pulse 2s infinite}
-.hero-h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(2.1rem,4vw,3.4rem);font-weight:700;color:#001626;line-height:1.1;letter-spacing:-.026em;margin-bottom:18px;text-wrap:balance}
-.hero-h1 em{font-style:normal;color:#1F6B4A}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:#F2EADA;border:1px solid #E9DFCA;color:#123D2B;font-size:.67rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:22px}
+.hero-badge::before{content:'';width:6px;height:6px;background:#2B6E4C;border-radius:50%;flex-shrink:0;animation:pulse 2s infinite}
+.hero-tagline{font-size:.78rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:#123D2B;margin-bottom:12px}.hero-tagline i{color:#C2A270;font-style:normal;margin:0 8px}
+.hero-h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(2.1rem,4vw,3.4rem);font-weight:700;color:#0F3325;line-height:1.1;letter-spacing:-.026em;margin-bottom:18px;text-wrap:balance}
+.hero-h1 em{font-style:normal;color:#2B6E4C}
 .hero-p{font-size:.98rem;color:#4A5859;max-width:480px;margin-bottom:28px;line-height:1.75}
 .hero-btns{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:26px}
 .hero-chips{display:flex;flex-wrap:wrap;gap:7px}
-.hero-chip{background:#fff;border:1px solid #E7DFC8;color:#4A5859;font-size:.71rem;padding:4px 12px;border-radius:100px;font-weight:500}
+.hero-chip{background:#fff;border:1px solid #E9DFCA;color:#4A5859;font-size:.71rem;padding:4px 12px;border-radius:100px;font-weight:500}
 
 /* Hero photo card (right) */
-.hero-photo-wrap{position:relative}
+.hero-photo-wrap::before{content:'';position:absolute;inset:-28px -28px auto auto;width:80%;aspect-ratio:1;border-radius:50%;border:1.5px solid #C2A270;opacity:.6;z-index:-1;pointer-events:none}
+.hero-photo-wrap{position:relative;isolation:isolate}
 .hero-photo{position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--sh2);aspect-ratio:4/3.4}
 .hero-photo img{width:100%;height:100%;object-fit:cover;display:block}
-.hero-photo-caption{position:absolute;right:18px;top:18px;background:rgba(14,56,48,.6);backdrop-filter:blur(6px);color:#fff;font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:.85rem;line-height:1.4;padding:10px 14px;border-radius:12px;max-width:190px}
+.hero-photo-caption{position:absolute;right:18px;top:18px;background:rgba(18,61,43,.6);backdrop-filter:blur(6px);color:#fff;font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:.85rem;line-height:1.4;padding:10px 14px;border-radius:12px;max-width:190px}
 .hero-float-card{position:absolute;left:-18px;bottom:-22px;background:var(--surface);border:1px solid var(--bdr);border-radius:16px;box-shadow:var(--sh2);padding:16px 18px;display:flex;gap:18px}
 .hero-float-stat{text-align:left}
-.hero-float-num{font-family:'Fraunces',Georgia,serif;font-size:1.3rem;font-weight:700;color:#0E3830;line-height:1}
+.hero-float-num{font-family:'Fraunces',Georgia,serif;font-size:1.3rem;font-weight:700;color:#123D2B;line-height:1}
 .hero-float-lbl{font-size:.64rem;color:var(--t3);margin-top:3px;font-weight:500}
 
 /* Services icon row */
-.svc-row-section{background:#F7F3E7;border-bottom:1px solid #E7DFC8}
+.svc-row-section{background:#FBF7EF;border-bottom:1px solid #E9DFCA}
 .svc-row{display:grid;grid-template-columns:repeat(5,1fr)}
-.svc-item{text-align:center;padding:36px 18px;border-right:1px solid #E7DFC8;transition:transform .25s cubic-bezier(.2,.8,.2,1)}
+.svc-item{text-align:center;padding:36px 18px;border-right:1px solid #E9DFCA;transition:transform .25s cubic-bezier(.2,.8,.2,1)}
 .svc-item:hover{transform:translateY(-4px)}
 .svc-item:last-child{border-right:none}
-.svc-icon{width:52px;height:52px;margin:0 auto 16px;background:linear-gradient(135deg,#E7EFEA,#DCEFE6);border-radius:14px;display:flex;align-items:center;justify-content:center;transition:background .25s,box-shadow .25s;box-shadow:0 2px 8px rgba(14,56,48,.06)}
-.svc-icon svg{width:24px;height:24px;stroke:#0E3830;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:stroke .2s}
-.svc-item:hover .svc-icon{background:linear-gradient(135deg,#145C42,#0E3830);box-shadow:0 10px 22px rgba(14,56,48,.28)}
+.svc-icon{width:52px;height:52px;margin:0 auto 16px;background:linear-gradient(135deg,#E7EFEA,#DCEFE6);border-radius:14px;display:flex;align-items:center;justify-content:center;transition:background .25s,box-shadow .25s;box-shadow:0 2px 8px rgba(18,61,43,.06)}
+.svc-icon svg{width:24px;height:24px;stroke:#123D2B;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:stroke .2s}
+.svc-item:hover .svc-icon{background:linear-gradient(135deg,#1B5A3C,#123D2B);box-shadow:0 10px 22px rgba(18,61,43,.28)}
 .svc-item:hover .svc-icon svg{stroke:#fff}
-.svc-name{font-family:'Fraunces',Georgia,serif;font-size:.98rem;font-weight:600;color:#001626;margin-bottom:6px}
+.svc-name{font-family:'Fraunces',Georgia,serif;font-size:.98rem;font-weight:600;color:#0F3325;margin-bottom:6px}
 .svc-desc{font-size:.78rem;color:#4A5859;line-height:1.5;margin-bottom:10px}
-.svc-link{font-size:.76rem;font-weight:600;color:#0E3830;display:inline-flex;align-items:center;gap:4px}
+.svc-link{font-size:.76rem;font-weight:600;color:#123D2B;display:inline-flex;align-items:center;gap:4px}
 
 /* About + stats band */
-.about-band{background:#F7F3E7}
+.about-band{background:#FBF7EF}
 .about-inner{display:grid;grid-template-columns:1.5fr 1fr;gap:0;align-items:stretch}
-.about-card{background:#0E3830;border-radius:24px;padding:clamp(28px,4vw,44px);display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.about-card{background:#123D2B;border-radius:24px;padding:clamp(28px,4vw,44px);display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
 .about-label{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#9FD9BE;margin-bottom:10px}
 .about-title{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.4rem,2.4vw,1.9rem);font-weight:700;color:#fff;margin-bottom:14px;line-height:1.2}
 .about-desc{font-size:.88rem;color:rgba(212,226,252,.75);line-height:1.7;margin-bottom:22px}
@@ -67,9 +69,9 @@
 .about-photo{border-radius:16px;overflow:hidden;aspect-ratio:1/1.05;box-shadow:0 10px 30px rgba(0,0,0,.35)}
 .about-photo img{width:100%;height:100%;object-fit:cover;display:block}
 .about-stats{display:flex;flex-direction:column;justify-content:center;gap:0;padding-left:clamp(24px,4vw,48px)}
-.as-item{padding-block:18px;border-bottom:1px solid #E7DFC8}
+.as-item{padding-block:18px;border-bottom:1px solid #E9DFCA}
 .as-item:last-child{border-bottom:none}
-.as-num{font-family:'Fraunces',Georgia,serif;font-size:2rem;font-weight:700;color:#0E3830;line-height:1}
+.as-num{font-family:'Fraunces',Georgia,serif;font-size:2rem;font-weight:700;color:#123D2B;line-height:1}
 .as-lbl{font-size:.8rem;color:#4A5859;margin-top:4px}
 
 /* Testimonial band */
@@ -95,7 +97,7 @@
 .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
 .why-visual{background:linear-gradient(135deg,var(--navy-d),var(--navy));border-radius:24px;padding:40px;position:relative;overflow:hidden;min-height:320px;display:flex;flex-direction:column;justify-content:flex-end}
 .why-visual::before{content:'';position:absolute;top:-30%;right:-20%;width:70%;height:100%;background:radial-gradient(ellipse,rgba(31,107,74,.5) 0%,transparent 65%)}
-.why-visual::after{content:'';position:absolute;bottom:-30%;left:-10%;width:60%;height:100%;background:radial-gradient(ellipse,rgba(20,92,66,.2) 0%,transparent 65%)}
+.why-visual::after{content:'';position:absolute;bottom:-30%;left:-10%;width:60%;height:100%;background:radial-gradient(ellipse,rgba(27,90,60,.2) 0%,transparent 65%)}
 .wv-content{position:relative;z-index:2}
 .wv-big{font-family:'Fraunces',Georgia,serif;font-size:4rem;font-weight:700;color:#fff;line-height:1;letter-spacing:-.04em}
 .wv-big span{font-size:2rem;color:#8FDDB8}
@@ -135,8 +137,8 @@
   <div class="container">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
-        <img src="assets/logo.png" class="nav-logo-img" alt="KS Workforce Solutions" width="36" height="36">
-        <div class="logo-name">KS Workforce Solutions<span>New Delhi · Workforce · HR · Technology</span></div>
+        <img src="assets/logo.png" class="nav-logo-img" alt="KS Workforce Solutions" width="56" height="56">
+        <div class="logo-name">KS Workforce Solutions<span>People · Process · Progress</span></div>
       </a>
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
@@ -168,14 +170,15 @@
     <div class="hero-inner">
       <div class="hero-left">
         <div class="hero-badge">
-          <span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent);animation:glowPulse 2s infinite;margin-right:2px"></span>
+          <span style="display:inline-block;width:9px;height:9px;border-radius:0 70% 0 70%;background:var(--accent);margin-right:2px"></span>
           New Delhi Startup · Est. 2026 · Workforce + Technology
         </div>
+        <div class="hero-tagline">People <i>•</i> Process <i>•</i> Progress</div>
         <h1 class="hero-h1" style="animation:slideUp .7s .15s ease both">Manpower, HR &amp; <em>Smart Technology</em><br>for India's Growing Businesses</h1>
         <p class="hero-p" style="animation:slideUp .7s .3s ease both">KS Workforce Solutions delivers skilled manpower to IT &amp; manufacturing companies, HR consultancy for small businesses, and cutting-edge technology — websites, custom portals, IoT platforms for WTP/Dams/Smart Cities, and VPN infrastructure.</p>
         <div class="hero-btns" style="animation:slideUp .7s .45s ease both">
-          <a href="manpower.html" class="btn" style="background:#0E3830;color:#fff">Our Services</a>
-          <a href="contact.html" class="btn" style="background:transparent;color:#0E3830;border:1.5px solid #0E3830">Talk to Our Experts</a>
+          <a href="manpower.html" class="btn" style="background:#123D2B;color:#fff">Our Services</a>
+          <a href="contact.html" class="btn" style="background:transparent;color:#123D2B;border:1.5px solid #123D2B">Talk to Our Experts</a>
         </div>
         <div class="hero-chips" style="animation:slideUp .7s .55s ease both">
           <span class="hero-chip">IT Staffing</span>
@@ -194,6 +197,16 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<svg class="swoosh" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true" style="background:var(--surface)"><path d="M0 0H1440V10C1100 46 760 2 420 26C260 37 120 30 0 18Z" fill="#FBF7EF"/><path d="M0 18C120 30 260 37 420 26C760 2 1100 46 1440 10" fill="none" stroke="#D8C4A0" stroke-width="2.5"/></svg>
+<!-- BRAND PILLARS -->
+<section class="pillars">
+  <div class="container pillars-row">
+    <div class="pillar"><div class="pillar-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="9" cy="7" r="3.2"/><path d="M3 20c0-3.6 2.7-6 6-6s6 2.4 6 6"/><circle cx="17" cy="8" r="2.4"/><path d="M16 14c3 0 5 2 5 5"/></svg></div><div><div class="pillar-k">People</div><p class="pillar-p">Verified, skilled talent matched to your roles — from shop floor to software teams.</p></div></div>
+    <div class="pillar"><div class="pillar-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="7" height="7" rx="1.5"/><rect x="14" y="13" width="7" height="7" rx="1.5"/><path d="M10 7.5h4a3 3 0 0 1 3 3V13"/></svg></div><div><div class="pillar-k">Process</div><p class="pillar-p">Compliant HR, payroll and NAPS/NATS apprenticeship processes that run smoothly every month.</p></div></div>
+    <div class="pillar"><div class="pillar-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V11"/><path d="M12 13c-4 0-7-3-7-8 4 0 7 3 7 8Z"/><path d="M12 11c0-4 3-7 7-7 0 4-3 7-7 7Z"/></svg></div><div><div class="pillar-k">Progress</div><p class="pillar-p">Technology and people strategy that help your business grow with confidence.</p></div></div>
   </div>
 </section>
 
@@ -287,7 +300,7 @@
             <div class="av-item"><div class="av-icon"><svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div><div class="av-lbl">Innovation</div></div>
             <div class="av-item"><div class="av-icon"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div><div class="av-lbl">Reliability</div></div>
           </div>
-          <a href="contact.html" class="btn" style="background:#fff;color:#0E3830;font-weight:700">Know More →</a>
+          <a href="contact.html" class="btn" style="background:#fff;color:#123D2B;font-weight:700">Know More →</a>
         </div>
         <div class="about-photo"><img src="assets/about-illustration.svg" alt="Desk with mug and books representing Talent, Culture, Growth"></div>
       </div>
@@ -458,8 +471,8 @@
     <div class="ft-grid">
       <div>
         <div style="display:flex;align-items:center;gap:10px">
-          <img src="assets/logo-light.png" class="nav-logo-img" alt="KS Workforce Solutions" width="36" height="36">
-          <div class="ft-name">KS Workforce Solutions<span>Workforce · HR · Technology</span></div>
+          <img src="assets/logo-light.png" class="nav-logo-img" alt="KS Workforce Solutions" width="56" height="56">
+          <div class="ft-name">KS Workforce Solutions<span>People · Process · Progress</span></div>
         </div>
         <p class="ft-tag">New Delhi startup delivering manpower, HR consultancy, and technology solutions across India.</p>
         <div class="ft-contact">
