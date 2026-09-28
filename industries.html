@@ -1,0 +1,200 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Industries We Serve — KS Workforce Solutions</title>
+<meta name="description" content="IT, Manufacturing, Healthcare, Finance, Retail, Logistics, Electronics & IoT, Real Estate — Manpower supply across 8 industries. KS Workforce Solutions, New Delhi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.ind-hero{background:var(--bg);padding-block:clamp(36px,5vw,60px);position:relative;overflow:hidden;border-bottom:1px solid var(--bdr)}
+.ind-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 70% 40%,rgba(31,107,74,.10) 0%,transparent 60%),radial-gradient(ellipse 40% 50% at 10% 80%,rgba(20,92,66,.10) 0%,transparent 55%)}
+.ind-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(14,56,48,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(14,56,48,.045) 1px,transparent 1px);background-size:48px 48px}
+/* Large industry cards */
+.ind-big-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.ind-big-card{background:var(--surface);border:1px solid var(--bdr);border-radius:20px;overflow:hidden;transition:box-shadow .2s,transform .2s,border-color .2s;text-decoration:none;display:block}
+.ind-big-card:hover{box-shadow:var(--sh2);transform:translateY(-5px);border-color:var(--navy)}
+.ibc-visual{height:110px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.ibc-icon{width:52px;height:52px;border-radius:14px;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;position:relative;z-index:1}
+.ibc-icon svg{width:26px;height:26px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ibc-body{padding:18px 18px 20px}
+.ibc-name{font-family:'Fraunces',Georgia,serif;font-size:1rem;font-weight:600;color:var(--text);margin-bottom:5px}
+.ibc-sub{font-size:.75rem;color:var(--t3);margin-bottom:10px}
+.ibc-roles{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:12px}
+.ibc-role{background:var(--navy-l);color:var(--navy);font-size:.62rem;font-weight:500;padding:2px 7px;border-radius:4px}
+.ibc-link{font-size:.8rem;font-weight:600;color:var(--navy);display:flex;align-items:center;gap:4px}
+@media(max-width:960px){.ind-big-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:500px){.ind-big-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><img src="assets/logo.png" class="nav-logo-img" alt="KS Workforce Solutions" width="36" height="36"><div class="logo-name">KS Workforce Solutions<span>New Delhi · Workforce · HR · Technology</span></div></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li><li><a href="manpower.html">Manpower</a></li><li><a href="technology.html">IT Services</a></li><li><a href="hr.html">HR</a></li><li><a href="industries.html" class="active">Industries</a></li><li><a href="locations.html">Locations</a></li><li><a href="contact.html">Contact</a></li>
+        <li><a href="tel:+918707777541" class="nav-cta">+91 870 777 7541</a></li>
+      </ul>
+      <button class="ham" id="ham"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mob-nav" id="mobNav">
+    <a href="manpower.html">Manpower</a><a href="technology.html">IT Services</a><a href="hr.html">HR</a><a href="industries.html">Industries</a><a href="locations.html">Locations</a><a href="contact.html">Contact</a>
+    <a href="tel:+918707777541" class="mob-cta">Call: +91 870 777 7541</a>
+  </div>
+</nav>
+
+<div class="ind-hero">
+  <div class="ind-hero-grid"></div>
+  <img src="assets/logo.png" class="hero-logo-mark" alt="" aria-hidden="true">
+  <div class="container" style="position:relative;z-index:2">
+    <div class="page-hero-badge">8 Industries</div>
+    <h1 style="font-family:'Fraunces',Georgia,serif;font-size:clamp(2rem,3.8vw,3rem);font-weight:700;color:var(--text);margin-bottom:14px;text-wrap:balance">Deep Expertise in the <em style="font-style:normal;color:var(--accent)">Sectors That Matter</em></h1>
+    <p style="font-size:.97rem;color:var(--t2);max-width:560px;line-height:1.75">From chip fabs to cloud companies — our recruiters and consultants know your industry's terminology, skills landscape, and hiring challenges.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="sec-hd">
+      <div class="label">All Industries</div>
+      <h2 class="heading sec-title">Manpower Supply Across 8 Key Sectors</h2>
+      <p class="sec-sub">Click any industry to see the specific roles we place, compliance requirements, and our screening process.</p>
+    </div>
+    <div class="ind-big-grid">
+
+      <a href="industries/it.html" class="ind-big-card">
+        <div class="ibc-visual" style="background:linear-gradient(135deg,#0D2249,#1F6B4A)">
+          <div class="ibc-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        </div>
+        <div class="ibc-body">
+          <div class="ibc-name">Information Technology</div>
+          <div class="ibc-sub">Software · IT Services</div>
+          <div class="ibc-roles"><span class="ibc-role">Full Stack Dev</span><span class="ibc-role">DevOps</span><span class="ibc-role">QA</span><span class="ibc-role">Cloud</span><span class="ibc-role">ML/AI</span></div>
+          <div class="ibc-link">View IT Industry <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></div>
+        </div>
+      </a>
+
+      <a href="industries/manufacturing.html" class="ind-big-card">
+        <div class="ibc-visual" style="background:linear-gradient(135deg,#1A3A1A,#2D6A2D)">
+          <div class="ibc-icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        </div>
+        <div class="ibc-body">
+          <div class="ibc-name">Manufacturing</div>
+          <div class="ibc-sub">Discrete &amp; Process Industries</div>
+          <div class="ibc-roles"><span class="ibc-role">CNC Operator</span><span class="ibc-role">Welder</span><span class="ibc-role">QC Inspector</span><span class="ibc-role">Supervisor</span></div>
+          <div class="ibc-link">View Manufacturing <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></div>
+        </div>
+      </a>
+
+      <a href="industries/electronics-iot.html" class="ind-big-card">
+        <div class="ibc-visual" style="background:linear-gradient(135deg,#0B1A2E,#0B5C7E)">
+          <div class="ibc-icon"><svg viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg></div>
+        </div>
+        <div class="ibc-body">
+          <div class="ibc-name">Electronics &amp; IoT</div>
+          <div class="ibc-sub">Embedded, Hardware, IoT</div>
+          <div class="ibc-roles"><span class="ibc-role">Embedded Eng</span><span class="ibc-role">PCB Designer</span><span class="ibc-role">IoT Dev</span><span class="ibc-role">FPGA</span></div>
+          <div class="ibc-link">View Electronics &amp; IoT <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></div>
+        </div>
+      </a>
+
+      <a href="industries/healthcare.html" class="ind-big-card">
+        <div class="ibc-visual" style="background:linear-gradient(135deg,#1A0A2E,#5C1A7E)">
+          <div class="ibc-icon"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        </div>
+        <div class="ibc-body">
+          <div class="ibc-name">Healthcare &amp; Pharma</div>
+          <div class="ibc-sub">Hospitals, Clinics, Labs</div>
+          <div class="ibc-roles"><span class="ibc-role">Staff Nurse</span><span class="ibc-role">Lab Tech</span><span class="ibc-role">Pharmacist</span><span class="ibc-role">Radiographer</span></div>
+          <div class="ibc-link">View Healthcare <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></div>
+        </div>
+      </a>
+
+      <a href="industries/finance.html" class="ind-big-card">
+        <div class="ibc-visual" style="background:linear-gradient(135deg,#1A1500,#6A5800)">
+          <div class="ibc-icon"><svg viewBox="0 0 24 24"><path d="M2 20h.01M7 20v-4M12 20v-8M17 20v-6M22 4v16"/></svg></div>
+        </div>
+        <div class="ibc-body">
+          <div class="ibc-name">Finance &amp; Banking</div>
+          <div class="ibc-sub">BFSI, Fintech, NBFCs</div>
+          <div class="ibc-roles"><span class="ibc-role">Credit Analyst</span><span class="ibc-role">RM</span><span class="ibc-role">Compliance</span><span class="ibc-role">CA</span></div>
+          <div class="ibc-link">View Finance <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></div>
+        </div>
+      </a>
+
+      <a href="industries/logistics.html" class="ind-big-card">
+        <div class="ibc-visual" style="background:linear-gradient(135deg,#1A0A00,#7E3A00)">
+          <div class="ibc-icon"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        </div>
+        <div class="ibc-body">
+          <div class="ibc-name">Logistics &amp; Supply Chain</div>
+          <div class="ibc-sub">Warehousing, Transport, 3PL</div>
+          <div class="ibc-roles"><span class="ibc-role">WH Supervisor</span><span class="ibc-role">Forklift Op</span><span class="ibc-role">Fleet Coord</span></div>
+          <div class="ibc-link">View Logistics <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></div>
+        </div>
+      </a>
+
+      <a href="industries/real-estate.html" class="ind-big-card">
+        <div class="ibc-visual" style="background:linear-gradient(135deg,#0A1A0A,#1A4A2A)">
+          <div class="ibc-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
+        </div>
+        <div class="ibc-body">
+          <div class="ibc-name">Real Estate &amp; Construction</div>
+          <div class="ibc-sub">Civil, MEP, Project Management</div>
+          <div class="ibc-roles"><span class="ibc-role">Civil Eng</span><span class="ibc-role">Site Supervisor</span><span class="ibc-role">MEP</span><span class="ibc-role">QS</span></div>
+          <div class="ibc-link">View Real Estate <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></div>
+        </div>
+      </a>
+
+      <a href="industries/retail.html" class="ind-big-card">
+        <div class="ibc-visual" style="background:linear-gradient(135deg,#1A001A,#5C1A5C)">
+          <div class="ibc-icon"><svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/></svg></div>
+        </div>
+        <div class="ibc-body">
+          <div class="ibc-name">Retail &amp; E-Commerce</div>
+          <div class="ibc-sub">D2C, Marketplace, Omnichannel</div>
+          <div class="ibc-roles"><span class="ibc-role">Store Manager</span><span class="ibc-role">Category Mgr</span><span class="ibc-role">WH Staff</span></div>
+          <div class="ibc-link">View Retail <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <div class="cta-content">
+      <h2 class="cta-title">Don't See Your Industry Listed?</h2>
+      <p class="cta-sub">We place candidates in many more sectors. Call us and we'll tell you if we can help within minutes.</p>
+      <div class="cta-btns">
+        <a href="contact.html" class="btn btn-wh">Contact Us</a>
+        <a href="tel:+918707777541" class="btn btn-owh">+91 870 777 7541</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="ft-grid">
+      <div><div style="display:flex;align-items:center;gap:10px"><img src="assets/logo-light.png" class="nav-logo-img" alt="KS Workforce Solutions" width="36" height="36"><div class="ft-name">KS Workforce Solutions<span>Workforce · HR · Technology</span></div></div><p class="ft-tag">New Delhi startup — Manpower, HR, IT Services.</p><div class="ft-contact"><a href="tel:+918707777541">📞 +91 870 777 7541</a></div></div>
+      <div><div class="ft-col-h">Industries</div><ul class="ft-links"><li><a href="industries/it.html">IT</a></li><li><a href="industries/manufacturing.html">Manufacturing</a></li><li><a href="industries/healthcare.html">Healthcare</a></li><li><a href="industries/electronics-iot.html">Electronics &amp; IoT</a></li></ul></div>
+      <div><div class="ft-col-h">More Industries</div><ul class="ft-links"><li><a href="industries/finance.html">Finance</a></li><li><a href="industries/logistics.html">Logistics</a></li><li><a href="industries/real-estate.html">Real Estate</a></li><li><a href="industries/retail.html">Retail</a></li></ul></div>
+      <div><div class="ft-col-h">Services</div><ul class="ft-links"><li><a href="manpower.html">Manpower</a></li><li><a href="technology.html">IT Services</a></li><li><a href="hr.html">HR</a></li></ul></div>
+      <div><div class="ft-col-h">Company</div><ul class="ft-links"><li><a href="locations.html">Locations</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    </div>
+    <div class="ft-bottom"><div class="ft-copy">© 2026 KS Workforce Solutions, New Delhi.</div><div class="ft-legal"><a href="contact.html">Privacy</a><a href="contact.html">Terms</a></div></div>
+  </div>
+</footer>
+<script>
+const ham=document.getElementById('ham'),mob=document.getElementById('mobNav');
+ham.addEventListener('click',()=>{ham.classList.toggle('open');mob.classList.toggle('open');});
+</script>
+</body>
+</html>

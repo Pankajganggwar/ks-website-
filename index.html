@@ -1,0 +1,506 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>KS Workforce Solutions — Manpower, HR & Technology | New Delhi</title>
+<meta name="description" content="KS Workforce Solutions, New Delhi — Manpower supply for IT & Manufacturing, HR Consultancy for SMEs, Website Development, Custom Portals, IoT Platforms for WTP/Dam/Smart City, and VPN Setup.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"KS Workforce Solutions","telephone":"+918707777541","address":{"@type":"PostalAddress","addressLocality":"New Delhi","addressCountry":"IN"},"url":"https://www.ksworkforcesolutions.com"}</script>
+<style>
+/* -- HOME HERO (light, photo-style) -- */
+.hero{position:relative;background:#F7F3E7;overflow:hidden;padding-block:clamp(48px,6vw,76px);border-bottom:1px solid #E7DFC8}
+.hero-bg{position:absolute;inset:0;pointer-events:none}
+.hero-grid{display:none}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero-left{}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:#EDE7D3;border:1px solid #E7DFC8;color:#0E3830;font-size:.67rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:22px}
+.hero-badge::before{content:'';width:6px;height:6px;background:#1F6B4A;border-radius:50%;flex-shrink:0;animation:pulse 2s infinite}
+.hero-h1{font-family:'Fraunces',Georgia,serif;font-size:clamp(2.1rem,4vw,3.4rem);font-weight:700;color:#001626;line-height:1.1;letter-spacing:-.026em;margin-bottom:18px;text-wrap:balance}
+.hero-h1 em{font-style:normal;color:#1F6B4A}
+.hero-p{font-size:.98rem;color:#4A5859;max-width:480px;margin-bottom:28px;line-height:1.75}
+.hero-btns{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:26px}
+.hero-chips{display:flex;flex-wrap:wrap;gap:7px}
+.hero-chip{background:#fff;border:1px solid #E7DFC8;color:#4A5859;font-size:.71rem;padding:4px 12px;border-radius:100px;font-weight:500}
+
+/* Hero photo card (right) */
+.hero-photo-wrap{position:relative}
+.hero-photo{position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--sh2);aspect-ratio:4/3.4}
+.hero-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-photo-caption{position:absolute;right:18px;top:18px;background:rgba(14,56,48,.6);backdrop-filter:blur(6px);color:#fff;font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:.85rem;line-height:1.4;padding:10px 14px;border-radius:12px;max-width:190px}
+.hero-float-card{position:absolute;left:-18px;bottom:-22px;background:var(--surface);border:1px solid var(--bdr);border-radius:16px;box-shadow:var(--sh2);padding:16px 18px;display:flex;gap:18px}
+.hero-float-stat{text-align:left}
+.hero-float-num{font-family:'Fraunces',Georgia,serif;font-size:1.3rem;font-weight:700;color:#0E3830;line-height:1}
+.hero-float-lbl{font-size:.64rem;color:var(--t3);margin-top:3px;font-weight:500}
+
+/* Services icon row */
+.svc-row-section{background:#F7F3E7;border-bottom:1px solid #E7DFC8}
+.svc-row{display:grid;grid-template-columns:repeat(5,1fr)}
+.svc-item{text-align:center;padding:36px 18px;border-right:1px solid #E7DFC8;transition:transform .25s cubic-bezier(.2,.8,.2,1)}
+.svc-item:hover{transform:translateY(-4px)}
+.svc-item:last-child{border-right:none}
+.svc-icon{width:52px;height:52px;margin:0 auto 16px;background:linear-gradient(135deg,#E7EFEA,#DCEFE6);border-radius:14px;display:flex;align-items:center;justify-content:center;transition:background .25s,box-shadow .25s;box-shadow:0 2px 8px rgba(14,56,48,.06)}
+.svc-icon svg{width:24px;height:24px;stroke:#0E3830;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:stroke .2s}
+.svc-item:hover .svc-icon{background:linear-gradient(135deg,#145C42,#0E3830);box-shadow:0 10px 22px rgba(14,56,48,.28)}
+.svc-item:hover .svc-icon svg{stroke:#fff}
+.svc-name{font-family:'Fraunces',Georgia,serif;font-size:.98rem;font-weight:600;color:#001626;margin-bottom:6px}
+.svc-desc{font-size:.78rem;color:#4A5859;line-height:1.5;margin-bottom:10px}
+.svc-link{font-size:.76rem;font-weight:600;color:#0E3830;display:inline-flex;align-items:center;gap:4px}
+
+/* About + stats band */
+.about-band{background:#F7F3E7}
+.about-inner{display:grid;grid-template-columns:1.5fr 1fr;gap:0;align-items:stretch}
+.about-card{background:#0E3830;border-radius:24px;padding:clamp(28px,4vw,44px);display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.about-label{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#9FD9BE;margin-bottom:10px}
+.about-title{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.4rem,2.4vw,1.9rem);font-weight:700;color:#fff;margin-bottom:14px;line-height:1.2}
+.about-desc{font-size:.88rem;color:rgba(212,226,252,.75);line-height:1.7;margin-bottom:22px}
+.about-values{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:24px}
+.av-item{text-align:center}
+.av-icon{width:36px;height:36px;margin:0 auto 8px;background:rgba(255,255,255,.08);border-radius:10px;display:flex;align-items:center;justify-content:center}
+.av-icon svg{width:17px;height:17px;stroke:#9FD9BE;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.av-lbl{font-size:.68rem;color:rgba(212,226,252,.65);font-weight:500}
+.about-photo{border-radius:16px;overflow:hidden;aspect-ratio:1/1.05;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.about-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.about-stats{display:flex;flex-direction:column;justify-content:center;gap:0;padding-left:clamp(24px,4vw,48px)}
+.as-item{padding-block:18px;border-bottom:1px solid #E7DFC8}
+.as-item:last-child{border-bottom:none}
+.as-num{font-family:'Fraunces',Georgia,serif;font-size:2rem;font-weight:700;color:#0E3830;line-height:1}
+.as-lbl{font-size:.8rem;color:#4A5859;margin-top:4px}
+
+/* Testimonial band */
+
+/* Right panel glass cards (kept for compatibility, unused now) */
+.hero-right{display:none}
+
+/* TRUST BAR */
+.trust-bar{background:var(--surface);border-bottom:1px solid var(--bdr);padding-block:16px}
+.trust-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.trust-item{display:flex;align-items:center;gap:7px;font-size:.78rem;color:var(--t2);font-weight:500}
+.trust-dot{width:7px;height:7px;border-radius:50%;background:var(--teal);flex-shrink:0}
+
+/* DIVISION SECTION */
+.div-section{background:var(--bg)}
+.div-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+
+/* INDUSTRIES PREVIEW */
+.ind-preview{background:var(--navy-l)}
+.ind-preview-inner{max-width:1200px;margin:0 auto;padding-inline:clamp(16px,4vw,52px)}
+
+/* WHY US */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.why-visual{background:linear-gradient(135deg,var(--navy-d),var(--navy));border-radius:24px;padding:40px;position:relative;overflow:hidden;min-height:320px;display:flex;flex-direction:column;justify-content:flex-end}
+.why-visual::before{content:'';position:absolute;top:-30%;right:-20%;width:70%;height:100%;background:radial-gradient(ellipse,rgba(31,107,74,.5) 0%,transparent 65%)}
+.why-visual::after{content:'';position:absolute;bottom:-30%;left:-10%;width:60%;height:100%;background:radial-gradient(ellipse,rgba(20,92,66,.2) 0%,transparent 65%)}
+.wv-content{position:relative;z-index:2}
+.wv-big{font-family:'Fraunces',Georgia,serif;font-size:4rem;font-weight:700;color:#fff;line-height:1;letter-spacing:-.04em}
+.wv-big span{font-size:2rem;color:#8FDDB8}
+.wv-sub{font-size:.85rem;color:rgba(212,226,252,.65);margin-top:6px}
+.wv-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+.wv-chip{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.14);font-size:.72rem;color:rgba(212,226,252,.75);padding:4px 11px;border-radius:100px}
+.why-list{display:flex;flex-direction:column;gap:18px}
+.why-item{display:flex;gap:14px;align-items:flex-start}
+.wi-icon{width:44px;height:44px;background:var(--navy-l);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s}
+.wi-icon svg{width:20px;height:20px;stroke:var(--navy);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:stroke .2s}
+.why-item:hover .wi-icon{background:var(--navy)}
+.why-item:hover .wi-icon svg{stroke:#fff}
+.wi-title{font-size:.94rem;font-weight:600;color:var(--text);margin-bottom:3px}
+.wi-desc{font-size:.82rem;color:var(--t2);line-height:1.6}
+
+@media(max-width:960px){
+  .hero-inner{grid-template-columns:1fr}.hero-photo-wrap{display:none}
+  .div-grid{grid-template-columns:1fr}.why-grid{grid-template-columns:1fr}
+  .svc-row{grid-template-columns:repeat(3,1fr)}
+  .svc-item{border-bottom:1px solid var(--bdr)}
+  .about-card{grid-template-columns:1fr}.about-photo{display:none}
+  .about-inner{grid-template-columns:1fr}
+  .about-stats{padding-left:0;margin-top:24px;flex-direction:row;flex-wrap:wrap;gap:20px}
+  .as-item{border-bottom:none;flex:1 1 30%}
+}
+@media(max-width:600px){
+  .svc-row{grid-template-columns:1fr 1fr}
+  .about-values{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<div id="progress-bar"></div>
+<!-- NAV -->
+<nav class="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo.png" class="nav-logo-img" alt="KS Workforce Solutions" width="36" height="36">
+        <div class="logo-name">KS Workforce Solutions<span>New Delhi · Workforce · HR · Technology</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="manpower.html">Manpower</a></li>
+        <li><a href="technology.html">IT Services</a></li>
+        <li><a href="hr.html">HR</a></li>
+        <li><a href="industries.html">Industries</a></li>
+        <li><a href="locations.html">Locations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="tel:+918707777541" class="nav-cta">+91 870 777 7541</a></li>
+      </ul>
+      <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mob-nav" id="mobNav">
+    <a href="manpower.html">Manpower Services</a>
+    <a href="technology.html">IT &amp; Technology</a>
+    <a href="hr.html">HR Consultancy</a>
+    <a href="industries.html">Industries</a>
+    <a href="locations.html">Locations</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="tel:+918707777541" class="mob-cta">Call: +91 870 777 7541</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-badge">
+          <span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent);animation:glowPulse 2s infinite;margin-right:2px"></span>
+          New Delhi Startup · Est. 2026 · Workforce + Technology
+        </div>
+        <h1 class="hero-h1" style="animation:slideUp .7s .15s ease both">Manpower, HR &amp; <em>Smart Technology</em><br>for India's Growing Businesses</h1>
+        <p class="hero-p" style="animation:slideUp .7s .3s ease both">KS Workforce Solutions delivers skilled manpower to IT &amp; manufacturing companies, HR consultancy for small businesses, and cutting-edge technology — websites, custom portals, IoT platforms for WTP/Dams/Smart Cities, and VPN infrastructure.</p>
+        <div class="hero-btns" style="animation:slideUp .7s .45s ease both">
+          <a href="manpower.html" class="btn" style="background:#0E3830;color:#fff">Our Services</a>
+          <a href="contact.html" class="btn" style="background:transparent;color:#0E3830;border:1.5px solid #0E3830">Talk to Our Experts</a>
+        </div>
+        <div class="hero-chips" style="animation:slideUp .7s .55s ease both">
+          <span class="hero-chip">IT Staffing</span>
+          <span class="hero-chip">Manufacturing Manpower</span>
+          <span class="hero-chip">HR for SMEs</span>
+          <span class="hero-chip">IoT — WTP / Dam / Smart City</span>
+          <span class="hero-chip">VPN Setup</span>
+        </div>
+      </div>
+      <div class="hero-photo-wrap">
+        <div class="hero-photo"><img src="assets/office-illustration.svg" alt="KS Workforce Solutions — modern office, HR and technology teams at work"></div>
+        <div class="hero-photo-caption">"One team for workforce, HR &amp; technology."</div>
+        <div class="hero-float-card">
+          <div class="hero-float-stat"><div class="hero-float-num">8+</div><div class="hero-float-lbl">Industries Served</div></div>
+          <div class="hero-float-stat"><div class="hero-float-num">98%</div><div class="hero-float-lbl">Client Satisfaction</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES ROW -->
+<section class="svc-row-section">
+  <div class="container">
+    <div class="svc-row">
+      <div class="svc-item">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div class="svc-name">Recruitment &amp; Staffing</div>
+        <div class="svc-desc">Skilled manpower for IT &amp; manufacturing companies.</div>
+        <a href="manpower.html" class="svc-link">Learn More →</a>
+      </div>
+      <div class="svc-item">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
+        <div class="svc-name">HR Consulting</div>
+        <div class="svc-desc">Policy setup, payroll &amp; compliance for SMEs.</div>
+        <a href="hr.html" class="svc-link">Learn More →</a>
+      </div>
+      <div class="svc-item">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+        <div class="svc-name">IT &amp; Technology</div>
+        <div class="svc-desc">Websites, portals, IoT platforms &amp; VPN setup.</div>
+        <a href="technology.html" class="svc-link">Learn More →</a>
+      </div>
+      <div class="svc-item">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <div class="svc-name">Compliance &amp; Payroll</div>
+        <div class="svc-desc">EPF, ESI, TDS filings — fully compliant, on time.</div>
+        <a href="hr.html" class="svc-link">Learn More →</a>
+      </div>
+      <div class="svc-item">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.1-2.8-2.8L7 14"/></svg></div>
+        <div class="svc-name">Industries We Serve</div>
+        <div class="svc-desc">Manpower supply across 8 key sectors nationwide.</div>
+        <a href="industries.html" class="svc-link">Learn More →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR (animated marquee) -->
+<div class="trust-bar">
+  <div class="trust-scroll-wrap">
+    <div class="trust-scroll">
+      <div class="trust-item"><div class="trust-dot"></div>EPF &amp; ESI Compliant Staffing</div>
+      <div class="trust-item"><div class="trust-dot"></div>Contract Labour Act 1970 Licensed</div>
+      <div class="trust-item"><div class="trust-dot"></div>Pan-India Service Coverage</div>
+      <div class="trust-item"><div class="trust-dot"></div>GST Registered · New Delhi</div>
+      <div class="trust-item"><div class="trust-dot"></div>72-Hour Staffing Turnaround</div>
+      <div class="trust-item"><div class="trust-dot"></div>POSH Act Compliant</div>
+      <div class="trust-item"><div class="trust-dot"></div>IoT Platform Builder</div>
+      <div class="trust-item"><div class="trust-dot"></div>VPN Infrastructure Experts</div>
+      <!-- Duplicate for seamless loop -->
+      <div class="trust-item"><div class="trust-dot"></div>EPF &amp; ESI Compliant Staffing</div>
+      <div class="trust-item"><div class="trust-dot"></div>Contract Labour Act 1970 Licensed</div>
+      <div class="trust-item"><div class="trust-dot"></div>Pan-India Service Coverage</div>
+      <div class="trust-item"><div class="trust-dot"></div>GST Registered · New Delhi</div>
+      <div class="trust-item"><div class="trust-dot"></div>72-Hour Staffing Turnaround</div>
+      <div class="trust-item"><div class="trust-dot"></div>POSH Act Compliant</div>
+      <div class="trust-item"><div class="trust-dot"></div>IoT Platform Builder</div>
+      <div class="trust-item"><div class="trust-dot"></div>VPN Infrastructure Experts</div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-row">
+      <div><div class="st-num"><span class="ctr" data-t="500">0</span><sup>+</sup></div><div class="st-lbl">Manpower Placements</div></div>
+      <div><div class="st-num"><span class="ctr" data-t="60">0</span><sup>+</sup></div><div class="st-lbl">SME HR Clients</div></div>
+      <div><div class="st-num"><span class="ctr" data-t="80">0</span><sup>+</sup></div><div class="st-lbl">Tech Projects Delivered</div></div>
+      <div><div class="st-num"><span class="ctr" data-t="98">0</span><sup>%</sup></div><div class="st-lbl">Client Satisfaction</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT + STATS -->
+<section class="section about-band">
+  <div class="container">
+    <div class="about-inner">
+      <div class="about-card">
+        <div>
+          <div class="about-label">About Us</div>
+          <div class="about-title">Your Trusted Workforce Partner</div>
+          <div class="about-desc">KS Workforce Solutions is a New Delhi startup built on one idea — businesses grow faster with the right people, the right processes, and the right technology, all from one partner. We handle the hiring, the HR, and the systems, so you can focus on what you do best.</div>
+          <div class="about-values">
+            <div class="av-item"><div class="av-icon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg></div><div class="av-lbl">Compliance</div></div>
+            <div class="av-item"><div class="av-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><div class="av-lbl">People First</div></div>
+            <div class="av-item"><div class="av-icon"><svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div><div class="av-lbl">Innovation</div></div>
+            <div class="av-item"><div class="av-icon"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div><div class="av-lbl">Reliability</div></div>
+          </div>
+          <a href="contact.html" class="btn" style="background:#fff;color:#0E3830;font-weight:700">Know More →</a>
+        </div>
+        <div class="about-photo"><img src="assets/about-illustration.svg" alt="Desk with mug and books representing Talent, Culture, Growth"></div>
+      </div>
+      <div class="about-stats">
+        <div class="as-item"><div class="as-num">500+</div><div class="as-lbl">Manpower Placements</div></div>
+        <div class="as-item"><div class="as-num">60+</div><div class="as-lbl">SME HR Clients</div></div>
+        <div class="as-item"><div class="as-num">80+</div><div class="as-lbl">Tech Projects Delivered</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THREE DIVISIONS -->
+<section class="section div-section">
+  <div class="container">
+    <div class="sec-hd reveal">
+      <div class="label">Our Three Divisions</div>
+      <h2 class="heading sec-title">Everything Your Business Needs to Grow</h2>
+      <p class="sec-sub">One company, three powerful service lines — from hiring the right people to building the right systems.</p>
+    </div>
+    <div class="div-grid">
+      <a href="manpower.html" class="div-card dc-navy reveal reveal-d1" style="text-decoration:none">
+        <div class="dc-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div class="dc-title">Manpower Supply</div>
+        <div class="dc-chips"><span class="dc-chip">IT Companies</span><span class="dc-chip">Manufacturing</span><span class="dc-chip">All 8 Industries</span><span class="dc-chip">EPF/ESI Compliant</span></div>
+        <div class="dc-desc">Skilled workforce for IT companies and manufacturing plants. Temporary, contract, and permanent placements — fully compliant with Indian labour law.</div>
+        <div class="dc-link">Explore Manpower Services <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></div>
+      </a>
+      <a href="technology.html" class="div-card dc-teal reveal reveal-d2" style="text-decoration:none">
+        <div class="dc-icon"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+        <div class="dc-title">IT &amp; Technology</div>
+        <div class="dc-chips"><span class="dc-chip">Website Dev</span><span class="dc-chip">Custom Portals</span><span class="dc-chip">IoT Platforms</span><span class="dc-chip">VPN Setup</span></div>
+        <div class="dc-desc">Website development, custom portals (HR, Employee, Client), IoT monitoring for WTP/Dams/Smart Cities, VPN setup, and mobile app development.</div>
+        <div class="dc-link">Explore IT Services <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></div>
+      </a>
+      <a href="hr.html" class="div-card dc-gold reveal reveal-d3" style="text-decoration:none">
+        <div class="dc-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
+        <div class="dc-title">HR Consultancy</div>
+        <div class="dc-chips"><span class="dc-chip">Small Companies</span><span class="dc-chip">Startups</span><span class="dc-chip">Payroll</span><span class="dc-chip">Compliance</span></div>
+        <div class="dc-desc">Professional HR for small and mid-size companies — policy setup, payroll processing, EPF/ESI/TDS filings, recruitment support, and labour law compliance.</div>
+        <div class="dc-link">Explore HR Services <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES PREVIEW -->
+<section class="section ind-preview">
+  <div class="container">
+    <div class="sec-hd reveal">
+      <div class="label">Industries We Serve</div>
+      <h2 class="heading sec-title">Manpower Supply Across 8 Sectors</h2>
+      <p class="sec-sub">From healthcare to logistics — we place qualified professionals in every major industry across India.</p>
+    </div>
+    <div class="ind-grid" style="margin-bottom:36px">
+      <a href="industries/healthcare.html" class="ind-card">
+        <div class="ind-icon"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <div class="ind-name">Healthcare</div><div class="ind-sub">Hospitals · Labs · Pharma</div>
+      </a>
+      <a href="industries/it.html" class="ind-card">
+        <div class="ind-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <div class="ind-name">Information Technology</div><div class="ind-sub">Software · IT Services</div>
+      </a>
+      <a href="industries/finance.html" class="ind-card">
+        <div class="ind-icon"><svg viewBox="0 0 24 24"><path d="M2 20h.01M7 20v-4"/><path d="M12 20v-8"/><path d="M17 20v-6"/><path d="M22 4v16"/></svg></div>
+        <div class="ind-name">Finance &amp; Banking</div><div class="ind-sub">BFSI · Fintech · NBFCs</div>
+      </a>
+      <a href="industries/manufacturing.html" class="ind-card">
+        <div class="ind-icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <div class="ind-name">Manufacturing</div><div class="ind-sub">Discrete · Process · Auto</div>
+      </a>
+      <a href="industries/real-estate.html" class="ind-card">
+        <div class="ind-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
+        <div class="ind-name">Real Estate</div><div class="ind-sub">Civil · MEP · Construction</div>
+      </a>
+      <a href="industries/retail.html" class="ind-card">
+        <div class="ind-icon"><svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/></svg></div>
+        <div class="ind-name">Retail &amp; E-Commerce</div><div class="ind-sub">D2C · Omnichannel</div>
+      </a>
+      <a href="industries/logistics.html" class="ind-card">
+        <div class="ind-icon"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <div class="ind-name">Logistics &amp; Supply Chain</div><div class="ind-sub">Warehouse · 3PL</div>
+      </a>
+      <a href="industries/education.html" class="ind-card">
+        <div class="ind-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/></svg></div>
+        <div class="ind-name">Education</div><div class="ind-sub">Schools · Ed-Tech</div>
+      </a>
+    </div>
+    <div style="text-align:center"><a href="industries.html" class="btn btn-navy">View All Industry Pages</a></div>
+  </div>
+</section>
+
+<!-- WHY KS -->
+<section class="section">
+  <div class="container">
+    <div class="sec-hd">
+      <div class="label">Why KS Workforce Solutions</div>
+      <h2 class="heading sec-title">Built on Trust, Compliance &amp; Speed</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-visual">
+        <div class="wv-content">
+          <div class="wv-big">8<span>+</span></div>
+          <div class="wv-sub" style="color:rgba(212,226,252,.55)">Industries · 8 Cities · 3 Divisions</div>
+          <div class="wv-chips">
+            <span class="wv-chip">New Delhi HQ</span>
+            <span class="wv-chip">EPF / ESI</span>
+            <span class="wv-chip">IoT Ready</span>
+            <span class="wv-chip">VPN Security</span>
+          </div>
+        </div>
+      </div>
+      <div class="why-list">
+        <div class="why-item">
+          <div class="wi-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+          <div><div class="wi-title">Full Labour Law Compliance</div><div class="wi-desc">Contract Labour Act 1970, EPF, ESI, TDS — all filings maintained. Your factory audits and HR audits pass without scrambling.</div></div>
+        </div>
+        <div class="why-item">
+          <div class="wi-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div><div class="wi-title">72-Hour Staffing Turnaround</div><div class="wi-desc">From requirement to shortlist in under three business days for most roles. Emergency placements within 24 hours for critical shifts.</div></div>
+        </div>
+        <div class="why-item">
+          <div class="wi-icon"><svg viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg></div>
+          <div><div class="wi-title">Real IoT + VPN Expertise</div><div class="wi-desc">We build and deploy IoT platforms for Water Treatment Plants, Dams, and Smart Cities — with secure VPN infrastructure for remote monitoring.</div></div>
+        </div>
+        <div class="why-item">
+          <div class="wi-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+          <div><div class="wi-title">One Partner, Every Need</div><div class="wi-desc">Hire staff, set up HR, and build your digital systems — all from one company. No coordination overhead between multiple vendors.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section proc-bg">
+  <div class="container">
+    <div class="sec-hd">
+      <div class="label">How We Work</div>
+      <h2 class="heading sec-title">From Requirement to Result in Four Steps</h2>
+    </div>
+    <div class="proc-steps">
+      <div class="proc-step"><div class="proc-num">01</div><div class="proc-title">Discovery Call</div><div class="proc-desc">We understand your exact need — manpower spec, HR gap, or software requirement — before anything else.</div></div>
+      <div class="proc-step"><div class="proc-num">02</div><div class="proc-title">Proposal &amp; Plan</div><div class="proc-desc">Tailored proposal within 24 hours: candidate shortlist, HR audit report, or tech scope with timeline and fixed cost.</div></div>
+      <div class="proc-step"><div class="proc-num">03</div><div class="proc-title">Execution</div><div class="proc-desc">We deliver — placing vetted staff, building your platform, or setting up your HR framework — with weekly updates.</div></div>
+      <div class="proc-step"><div class="proc-num">04</div><div class="proc-title">Support &amp; Handover</div><div class="proc-desc">Post-placement check-ins, software training, and optional ongoing support retainer. We stay until outcomes stick.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="container">
+    <div class="cta-content">
+      <h2 class="cta-title">One Partner for Workforce, HR &amp; Technology</h2>
+      <p class="cta-sub">Hire talent, set up HR, or build a digital platform — talk to our team in New Delhi today.</p>
+      <div class="cta-btns">
+        <a href="tel:+918707777541" class="btn btn-wh"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.15 3.38 2 2 0 0 1 3.12 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/></svg> Call +91 870 777 7541</a>
+        <a href="contact.html" class="btn btn-owh">Send a Message</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="ft-grid">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px">
+          <img src="assets/logo-light.png" class="nav-logo-img" alt="KS Workforce Solutions" width="36" height="36">
+          <div class="ft-name">KS Workforce Solutions<span>Workforce · HR · Technology</span></div>
+        </div>
+        <p class="ft-tag">New Delhi startup delivering manpower, HR consultancy, and technology solutions across India.</p>
+        <div class="ft-contact">
+          <a href="tel:+918707777541">📞 +91 870 777 7541</a>
+          <a href="mailto:info@ksworkforcesolutions.com">✉ info@ksworkforcesolutions.com</a>
+          <a href="locations.html">📍 New Delhi (HQ) · Pan-India</a>
+        </div>
+      </div>
+      <div><div class="ft-col-h">Manpower</div><ul class="ft-links"><li><a href="manpower.html">IT Staffing</a></li><li><a href="manpower.html">Manufacturing</a></li><li><a href="manpower.html">Contract Staff</a></li><li><a href="manpower.html">Executive Search</a></li></ul></div>
+      <div><div class="ft-col-h">HR Services</div><ul class="ft-links"><li><a href="hr.html">HR-as-a-Service</a></li><li><a href="hr.html">Payroll &amp; EPF/ESI</a></li><li><a href="hr.html">Labour Compliance</a></li><li><a href="hr.html">Startup HR Setup</a></li></ul></div>
+      <div><div class="ft-col-h">Technology</div><ul class="ft-links"><li><a href="technology.html">Website Development</a></li><li><a href="technology.html">Custom Portals</a></li><li><a href="technology.html">IoT — WTP / Dam</a></li><li><a href="technology.html">VPN Setup</a></li></ul></div>
+      <div><div class="ft-col-h">Company</div><ul class="ft-links"><li><a href="industries.html">Industries</a></li><li><a href="locations.html">Locations</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="contact.html">Privacy Policy</a></li></ul></div>
+    </div>
+    <div class="ft-bottom">
+      <div class="ft-copy">© 2026 KS Workforce Solutions, New Delhi. All rights reserved.</div>
+      <div class="ft-legal"><a href="contact.html">Privacy</a><a href="contact.html">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ── Nav hamburger ── */
+const ham=document.getElementById('ham'),mob=document.getElementById('mobNav');
+ham.addEventListener('click',()=>{ham.classList.toggle('open');mob.classList.toggle('open');});
+mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{ham.classList.remove('open');mob.classList.remove('open');}));
+
+/* ── Animated counter ── */
+function animCtr(el){const t=+el.dataset.t,d=1600,s=performance.now();const tick=n=>{const p=Math.min((n-s)/d,1),e=1-Math.pow(1-p,3);el.textContent=Math.round(e*t).toLocaleString('en-IN');if(p<1)requestAnimationFrame(tick);};requestAnimationFrame(tick);}
+const ctrObs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){animCtr(e.target);ctrObs.unobserve(e.target);}}),{threshold:.5});
+document.querySelectorAll('.ctr').forEach(c=>ctrObs.observe(c));
+
+/* ── Scroll reveal ── */
+const revealObs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('revealed');revealObs.unobserve(e.target);}}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>revealObs.observe(el));
+
+/* ── Page progress bar ── */
+const pb=document.getElementById('progress-bar');
+if(pb){document.addEventListener('scroll',()=>{const h=document.documentElement;const pct=(h.scrollTop||document.body.scrollTop)/(h.scrollHeight-h.clientHeight)*100;pb.style.width=pct+'%';},{passive:true});}
+
+/* ── Nav scroll class ── */
+const nav=document.querySelector('.nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',scrollY>20);},{passive:true});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,575 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>IT & Technology Services — KS Workforce Solutions</title>
+<meta name="description" content="Website development, custom portals (HR, Employee, Client), IoT platforms for WTP/Dam/Smart City, VPN setup, and mobile apps — KS Workforce Solutions, New Delhi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+/* ── TECH PAGE SPECIFICS ─────────────────── */
+.tech-nav{background:var(--navy-d);border-bottom:1px solid rgba(255,255,255,.08);overflow-x:auto;scrollbar-width:none}
+.tech-nav::-webkit-scrollbar{display:none}
+.tech-nav-inner{display:flex;gap:0;white-space:nowrap}
+.tn-item{padding:13px 20px;font-size:.82rem;font-weight:500;color:rgba(212,226,252,.55);transition:color .15s,background .15s;border-bottom:2px solid transparent;cursor:pointer;text-decoration:none;display:inline-block}
+.tn-item:hover{color:rgba(212,226,252,.9);background:rgba(255,255,255,.04)}
+.tn-item.active{color:#fff;border-bottom-color:var(--teal)}
+
+/* SERVICE SECTION */
+.svc-section{padding-block:clamp(60px,7vw,96px)}
+.svc-section:nth-child(even){background:var(--navy-l)}
+.svc-inner{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.svc-inner.rev{direction:rtl}
+.svc-inner.rev>*{direction:ltr}
+.svc-label{font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+.svc-h{font-family:'Fraunces',Georgia,serif;font-size:clamp(1.6rem,2.8vw,2.3rem);font-weight:700;line-height:1.14;letter-spacing:-.02em;color:var(--text);margin-bottom:14px;text-wrap:balance}
+.svc-p{font-size:.92rem;color:var(--t2);line-height:1.78;margin-bottom:20px}
+.svc-feats{display:flex;flex-direction:column;gap:11px;margin-bottom:24px}
+.sf{display:flex;gap:10px;align-items:flex-start}
+.sf-check{width:20px;height:20px;border-radius:5px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.sf-check svg{width:11px;height:11px;fill:none;stroke:#fff;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.sf-navy .sf-check{background:var(--navy)}.sf-teal .sf-check{background:var(--teal)}
+.sf-text{font-size:.86rem;color:var(--t2);line-height:1.55}
+.svc-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+
+/* BROWSER MOCKUP */
+.browser-mock{background:var(--surface);border:1px solid var(--bdr);border-radius:16px;overflow:hidden;box-shadow:var(--sh2)}
+.bm-bar{background:var(--bg);border-bottom:1px solid var(--bdr);padding:10px 14px;display:flex;align-items:center;gap:10px}
+.bm-dots{display:flex;gap:5px}
+.bm-dot{width:10px;height:10px;border-radius:50%}
+.bm-url{flex:1;background:var(--surface);border:1px solid var(--bdr);border-radius:6px;padding:4px 10px;font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--t3)}
+.bm-body{padding:0}
+
+/* WEBSITE MOCKUP */
+.site-mock-nav{background:var(--navy-d);height:44px;display:flex;align-items:center;padding:0 16px;gap:12px}
+.smn-logo{width:24px;height:24px;background:var(--accent);border-radius:5px}
+.smn-links{display:flex;gap:10px;margin-left:auto}
+.smn-link{height:6px;border-radius:3px;background:rgba(255,255,255,.2)}
+.smn-btn{height:22px;width:60px;background:var(--accent);border-radius:5px;margin-left:6px}
+.site-mock-hero{background:linear-gradient(135deg,var(--navy-d) 0%,var(--navy) 100%);padding:28px 20px;position:relative;overflow:hidden}
+.site-mock-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:28px 28px}
+.smh-inner{position:relative;z-index:1}
+.smh-badge{display:inline-block;background:rgba(20,92,66,.2);border:1px solid rgba(20,92,66,.3);color:#8FDDB8;font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:2px 8px;border-radius:100px;margin-bottom:8px}
+.smh-h{font-family:'Fraunces',Georgia,serif;font-size:1.1rem;font-weight:700;color:#fff;line-height:1.2;margin-bottom:6px}
+.smh-p{font-size:.68rem;color:rgba(212,226,252,.65);margin-bottom:10px}
+.smh-btns{display:flex;gap:7px}
+.smh-btn1{background:var(--accent);color:#fff;font-size:.65rem;font-weight:600;padding:5px 12px;border-radius:6px}
+.smh-btn2{background:rgba(255,255,255,.08);color:rgba(212,226,252,.8);font-size:.65rem;padding:5px 12px;border-radius:6px;border:1px solid rgba(255,255,255,.15)}
+.smh-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:12px}
+.smh-card{background:rgba(255,255,255,.07);border-radius:8px;padding:10px}
+.smh-card-n{font-size:.65rem;font-weight:600;color:#fff;margin-bottom:3px}
+.smh-card-v{font-family:'JetBrains Mono',monospace;font-size:.85rem;font-weight:600;color:#8FDDB8}
+.site-mock-footer{display:flex;gap:6px;padding:10px 16px;border-top:1px solid var(--bdr);background:var(--bg)}
+.smf-pill{height:6px;border-radius:3px;background:var(--bdr);flex:1}
+
+/* PORTAL MOCKUP */
+.portal-mock{background:var(--bg);min-height:220px}
+.pm-sidebar{width:120px;background:var(--navy-d);min-height:220px;display:inline-block;vertical-align:top;padding:14px 10px;float:left}
+.pm-logo{width:28px;height:28px;background:var(--accent);border-radius:7px;margin-bottom:14px}
+.pm-nav-items{display:flex;flex-direction:column;gap:5px}
+.pm-nav-item{height:24px;border-radius:5px;background:rgba(255,255,255,.07);display:flex;align-items:center;padding:0 8px;gap:6px}
+.pm-nav-item.pni-active{background:rgba(31,107,74,.5);border-left:2px solid var(--teal)}
+.pm-ni-dot{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.3);flex-shrink:0}
+.pm-ni-dot.active{background:var(--teal)}
+.pm-ni-txt{width:50px;height:5px;border-radius:2px;background:rgba(255,255,255,.18)}
+.pm-ni-txt.white{background:rgba(255,255,255,.55)}
+.pm-main{margin-left:120px;padding:14px;background:var(--bg)}
+.pm-topbar{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.pm-title{font-size:.78rem;font-weight:600;color:var(--text)}
+.pm-badge{background:var(--teal-l);color:var(--teal);font-size:.6rem;font-weight:600;padding:2px 7px;border-radius:4px;margin-left:auto}
+.pm-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
+.pm-tile{background:var(--surface);border:1px solid var(--bdr);border-radius:8px;padding:10px}
+.pm-tile-n{font-size:.65rem;color:var(--t3);margin-bottom:4px}
+.pm-tile-v{font-family:'Fraunces',Georgia,serif;font-size:1rem;font-weight:700;color:var(--text)}
+.pm-table-row{display:flex;gap:6px;align-items:center;padding:5px 8px;background:var(--surface);border-radius:5px;margin-bottom:4px}
+.pm-tr-name{font-size:.68rem;color:var(--text);flex:1}
+.pm-tr-dept{font-size:.6rem;color:var(--t3);width:60px}
+.pm-tr-status{font-size:.6rem;font-weight:600;padding:1px 6px;border-radius:4px}
+.pm-tr-status.ok{background:var(--teal-l);color:var(--teal)}
+.pm-tr-status.pend{background:var(--gold-l);color:var(--gold)}
+
+/* IOT DASHBOARD MOCKUP */
+.iot-mock{background:#040C1A;min-height:280px;padding:16px}
+.im-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.im-title{font-family:'Fraunces',Georgia,serif;font-size:.82rem;font-weight:600;color:#fff}
+.im-live{background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.3);color:#4ADE80;font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:2px 8px;border-radius:4px}
+.im-time{font-family:'JetBrains Mono',monospace;font-size:.62rem;color:rgba(212,226,252,.35);margin-left:auto}
+.im-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}
+.im-m{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:10px}
+.im-m-val{font-family:'JetBrains Mono',monospace;font-size:.9rem;font-weight:600;line-height:1;margin-bottom:3px}
+.im-m-lbl{font-size:.56rem;color:rgba(212,226,252,.35)}
+.im-chart-area{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:8px;padding:10px;margin-bottom:10px}
+.im-chart-lbl{font-size:.58rem;color:rgba(212,226,252,.3);margin-bottom:7px}
+.im-nodes{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
+.im-node{background:rgba(255,255,255,.04);border-radius:6px;padding:7px 4px;text-align:center}
+.im-nd-dot{width:6px;height:6px;border-radius:50%;margin:0 auto 4px}
+.im-nd-lbl{font-size:.54rem;color:rgba(212,226,252,.35)}
+
+/* SECTION BG ALT */
+.bg-alt{background:var(--surface)}
+
+@media(max-width:900px){
+  .svc-inner,.svc-inner.rev{grid-template-columns:1fr;direction:ltr}
+  .svc-inner.rev>*{direction:ltr}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/logo.png" class="nav-logo-img" alt="KS Workforce Solutions" width="36" height="36">
+        <div class="logo-name">KS Workforce Solutions<span>New Delhi · Workforce · HR · Technology</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="manpower.html">Manpower</a></li>
+        <li><a href="technology.html" class="active">IT Services</a></li>
+        <li><a href="hr.html">HR</a></li>
+        <li><a href="industries.html">Industries</a></li>
+        <li><a href="locations.html">Locations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="tel:+918707777541" class="nav-cta">+91 870 777 7541</a></li>
+      </ul>
+      <button class="ham" id="ham"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mob-nav" id="mobNav">
+    <a href="manpower.html">Manpower</a><a href="technology.html">IT Services</a><a href="hr.html">HR</a>
+    <a href="industries.html">Industries</a><a href="locations.html">Locations</a><a href="contact.html">Contact</a>
+    <a href="tel:+918707777541" class="mob-cta">Call: +91 870 777 7541</a>
+  </div>
+</nav>
+
+<!-- TECH NAV -->
+<div class="tech-nav">
+  <div class="container">
+    <div class="tech-nav-inner">
+      <a href="#website" class="tn-item active">Website Dev</a>
+      <a href="#portals" class="tn-item">Custom Portals</a>
+      <a href="#iot" class="tn-item">IoT Platforms</a>
+      <a href="#vpn" class="tn-item">VPN Setup</a>
+      <a href="#mobile" class="tn-item">Mobile Apps</a>
+      <a href="#erp" class="tn-item">ERP Integration</a>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-grid"></div>
+  <img src="assets/logo.png" class="hero-logo-mark" alt="" aria-hidden="true">
+  <div class="container page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span>IT &amp; Technology Services</span></div>
+    <div class="page-hero-badge">Technology Division</div>
+    <h1>From Websites to <em>IoT Platforms</em> — We Build What Your Business Needs</h1>
+    <p>Website development, custom portals, IoT monitoring for critical infrastructure, VPN networks, and mobile apps — designed, built, and deployed by KS Workforce Solutions from New Delhi.</p>
+    <div class="ph-btns">
+      <a href="contact.html" class="btn btn-acc">Start a Project</a>
+      <a href="tel:+917983116873" class="btn btn-ghost">IT Services: +91 7983116873</a>
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-row">
+      <div><div class="st-num"><span class="ctr" data-t="80">0</span><sup>+</sup></div><div class="st-lbl">Projects Delivered</div></div>
+      <div><div class="st-num"><span class="ctr" data-t="15">0</span><sup>+</sup></div><div class="st-lbl">IoT Deployments</div></div>
+      <div><div class="st-num"><span class="ctr" data-t="25">0</span><sup>+</sup></div><div class="st-lbl">Portals Built</div></div>
+      <div><div class="st-num"><span class="ctr" data-t="100">0</span><sup>%</sup></div><div class="st-lbl">On-Time Delivery</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ── WEBSITE DEVELOPMENT ── -->
+<section id="website" class="svc-section">
+  <div class="container">
+    <div class="svc-inner">
+      <div>
+        <div class="svc-label" style="color:var(--teal)">Website Development</div>
+        <h2 class="svc-h">Professional Websites That Work for Your Business</h2>
+        <p class="svc-p">We design and develop fully responsive corporate websites, product landing pages, company official websites, and e-commerce stores — SEO-optimised, CMS-powered, and ready to convert visitors.</p>
+        <div class="svc-feats">
+          <div class="sf sf-teal"><div class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><div class="sf-text"><strong>Corporate &amp; Official Websites</strong> — Multi-page branded sites with about, services, contact, and blog sections. Fully editable CMS for non-technical staff.</div></div>
+          <div class="sf sf-teal"><div class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><div class="sf-text"><strong>E-Commerce Stores</strong> — Product catalogues, cart, payment gateway (Razorpay / Cashfree / PayU), GST invoices, and order management.</div></div>
+          <div class="sf sf-teal"><div class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><div class="sf-text"><strong>Landing Pages &amp; Campaign Sites</strong> — Fast-loading, conversion-focused pages for lead generation and product launches.</div></div>
+          <div class="sf sf-teal"><div class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><div class="sf-text"><strong>SEO-Optimised from Day One</strong> — Structured data, sitemap, meta tags, Core Web Vitals, and Google Search Console setup included.</div></div>
+          <div class="sf sf-teal"><div class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><div class="sf-text"><strong>Government &amp; Institutional Websites</strong> — Accessible, multilingual, and compliant with NIC guidelines and GIGW standards.</div></div>
+        </div>
+        <div class="svc-btns">
+          <a href="contact.html" class="btn btn-teal">Get a Website Quote</a>
+          <a href="tel:+918707777541" class="btn btn-navy">Call Us</a>
+        </div>
+        <div class="card-tags" style="margin-top:20px">
+          <span class="tag tag-teal">React / Next.js</span><span class="tag tag-teal">WordPress</span><span class="tag tag-teal">Custom CMS</span><span class="tag tag-teal">Razorpay</span><span class="tag tag-teal">SEO</span><span class="tag tag-teal">GIGW Compliant</span>
+        </div>
+      </div>
+      <div>
+        <!-- Website mockup -->
+        <div class="browser-mock">
+          <div class="bm-bar">
+            <div class="bm-dots"><div class="bm-dot" style="background:#FF5F57"></div><div class="bm-dot" style="background:#FEBC2E"></div><div class="bm-dot" style="background:#28C840"></div></div>
+            <div class="bm-url">www.yourcompany.com</div>
+          </div>
+          <div class="bm-body">
+            <div class="site-mock-nav">
+              <div class="smn-logo"></div>
+              <div class="smn-links">
+                <div class="smn-link" style="width:32px"></div>
+                <div class="smn-link" style="width:42px"></div>
+                <div class="smn-link" style="width:28px"></div>
+                <div class="smn-link" style="width:38px"></div>
+              </div>
+              <div class="smn-btn"></div>
+            </div>
+            <div class="site-mock-hero">
+              <div class="smh-inner">
+                <div class="smh-badge">Official Website</div>
+                <div class="smh-h">Your Company, Professionally Online</div>
+                <div class="smh-p">SEO-optimised · Mobile-first · Fast loading · Easy to update</div>
+                <div class="smh-btns"><div class="smh-btn1">Get Started</div><div class="smh-btn2">Learn More</div></div>
+                <div class="smh-cards">
+                  <div class="smh-card"><div class="smh-card-n">Visitors</div><div class="smh-card-v">12.4k</div></div>
+                  <div class="smh-card"><div class="smh-card-n">Leads</div><div class="smh-card-v">348</div></div>
+                  <div class="smh-card"><div class="smh-card-n">Rank</div><div class="smh-card-v">#1</div></div>
+                </div>
+              </div>
+            </div>
+            <div style="padding:12px 16px;background:var(--bg);display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+              <div style="background:var(--surface);border:1px solid var(--bdr);border-radius:8px;padding:10px">
+                <div style="width:24px;height:24px;background:var(--teal-l);border-radius:6px;margin-bottom:6px"></div>
+                <div style="width:70%;height:5px;background:var(--bdr);border-radius:2px;margin-bottom:4px"></div>
+                <div style="width:90%;height:4px;background:var(--bg);border-radius:2px"></div>
+              </div>
+              <div style="background:var(--surface);border:1px solid var(--bdr);border-radius:8px;padding:10px">
+                <div style="width:24px;height:24px;background:var(--navy-l);border-radius:6px;margin-bottom:6px"></div>
+                <div style="width:60%;height:5px;background:var(--bdr);border-radius:2px;margin-bottom:4px"></div>
+                <div style="width:85%;height:4px;background:var(--bg);border-radius:2px"></div>
+              </div>
+              <div style="background:var(--surface);border:1px solid var(--bdr);border-radius:8px;padding:10px">
+                <div style="width:24px;height:24px;background:var(--acc-l);border-radius:6px;margin-bottom:6px"></div>
+                <div style="width:75%;height:5px;background:var(--bdr);border-radius:2px;margin-bottom:4px"></div>
+                <div style="width:80%;height:4px;background:var(--bg);border-radius:2px"></div>
+              </div>
+            </div>
+            <div class="site-mock-footer">
+              <div class="smf-pill"></div><div class="smf-pill"></div><div class="smf-pill"></div><div class="smf-pill"></div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:12px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
+          <div style="background:var(--teal-l);border:1px solid var(--bdr);border-radius:10px;padding:12px;text-align:center">
+            <div style="font-family:'Fraunces',Georgia,serif;font-size:1.1rem;font-weight:700;color:var(--teal)">7–14</div>
+            <div style="font-size:.7rem;color:var(--t3)">Days Delivery</div>
+          </div>
+          <div style="background:var(--navy-l);border:1px solid var(--bdr);border-radius:10px;padding:12px;text-align:center">
+            <div style="font-family:'Fraunces',Georgia,serif;font-size:1.1rem;font-weight:700;color:var(--navy)">Mobile</div>
+            <div style="font-size:.7rem;color:var(--t3)">First Design</div>
+          </div>
+          <div style="background:var(--acc-l);border:1px solid var(--bdr);border-radius:10px;padding:12px;text-align:center">
+            <div style="font-family:'Fraunces',Georgia,serif;font-size:1.1rem;font-weight:700;color:var(--accent)">SEO</div>
+            <div style="font-size:.7rem;color:var(--t3)">Ready to Rank</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CUSTOM PORTALS ── -->
+<section id="portals" class="svc-section bg-alt">
+  <div class="container">
+    <div class="svc-inner rev">
+      <div>
+        <div class="svc-label" style="color:var(--navy)">Custom Portal Development</div>
+        <h2 class="svc-h">HR Portals, Employee Portals, Client &amp; Admin Dashboards</h2>
+        <p class="svc-p">We build role-based web portals that automate your internal operations — from employee leave requests to client project tracking. Fully custom, not off-the-shelf.</p>
+        <div class="svc-feats">
+          <div class="sf sf-navy"><div class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><div class="sf-text"><strong>HR Self-Service Portal</strong> — Leave application, payslips, attendance tracking, document upload, appraisal forms, and onboarding checklists.</div></div>
+          <div class="sf sf-navy"><div class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><div class="sf-text"><strong>Employee Portal</strong> — Company announcements, team directory, holiday calendar, training modules, and expense claims.</div></div>
+          <div class="sf sf-navy"><div class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><div class="sf-text"><strong>Client Portal</strong> — Project status, invoice tracking, file sharing, support tickets, and communication thread per client.</div></div>
+          <div class="sf sf-navy"><div class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><div class="sf-text"><strong>Admin Panel</strong> — Full CMS, user management, role-based permissions, reports, and data export.</div></div>
+          <div class="sf sf-navy"><div class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><div class="sf-text"><strong>Vendor / Contractor Portal</strong> — PO management, invoice submission, work order tracking, and compliance document upload.</div></div>
+        </div>
+        <div class="svc-btns">
+          <a href="contact.html" class="btn btn-navy">Discuss Your Portal</a>
+        </div>
+        <div class="card-tags" style="margin-top:20px">
+          <span class="tag tag-navy">React</span><span class="tag tag-navy">Node.js</span><span class="tag tag-navy">PostgreSQL</span><span class="tag tag-navy">Role-Based Auth</span><span class="tag tag-navy">REST API</span><span class="tag tag-navy">AWS / GCP</span>
+        </div>
+      </div>
+      <div>
+        <!-- HR Portal mockup -->
+        <div class="browser-mock">
+          <div class="bm-bar">
+            <div class="bm-dots"><div class="bm-dot" style="background:#FF5F57"></div><div class="bm-dot" style="background:#FEBC2E"></div><div class="bm-dot" style="background:#28C840"></div></div>
+            <div class="bm-url">hr.yourcompany.com — HR Portal</div>
+          </div>
+          <div class="bm-body">
+            <div class="portal-mock" style="display:flex;min-height:260px">
+              <div class="pm-sidebar">
+                <div class="pm-logo"></div>
+                <div class="pm-nav-items">
+                  <div class="pm-nav-item pni-active"><div class="pm-ni-dot active"></div><div class="pm-ni-txt white"></div></div>
+                  <div class="pm-nav-item"><div class="pm-ni-dot"></div><div class="pm-ni-txt"></div></div>
+                  <div class="pm-nav-item"><div class="pm-ni-dot"></div><div class="pm-ni-txt"></div></div>
+                  <div class="pm-nav-item"><div class="pm-ni-dot"></div><div class="pm-ni-txt"></div></div>
+                  <div class="pm-nav-item"><div class="pm-ni-dot"></div><div class="pm-ni-txt"></div></div>
+                  <div class="pm-nav-item"><div class="pm-ni-dot"></div><div class="pm-ni-txt"></div></div>
+                </div>
+              </div>
+              <div class="pm-main" style="flex:1">
+                <div class="pm-topbar">
+                  <div class="pm-title">HR Dashboard</div>
+                  <div class="pm-badge">Live</div>
+                </div>
+                <div class="pm-grid">
+                  <div class="pm-tile"><div class="pm-tile-n">Employees</div><div class="pm-tile-v">148</div></div>
+                  <div class="pm-tile"><div class="pm-tile-n">On Leave</div><div class="pm-tile-v">7</div></div>
+                  <div class="pm-tile"><div class="pm-tile-n">Open Positions</div><div class="pm-tile-v">12</div></div>
+                  <div class="pm-tile"><div class="pm-tile-n">Payroll Due</div><div class="pm-tile-v" style="color:var(--gold)">3d</div></div>
+                </div>
+                <div>
+                  <div style="font-size:.62rem;font-weight:600;color:var(--t3);margin-bottom:5px">Recent Leave Requests</div>
+                  <div class="pm-table-row"><div class="pm-tr-name">Amit Sharma</div><div class="pm-tr-dept">Engineering</div><div class="pm-tr-status ok">Approved</div></div>
+                  <div class="pm-table-row"><div class="pm-tr-name">Priya Singh</div><div class="pm-tr-dept">Marketing</div><div class="pm-tr-status pend">Pending</div></div>
+                  <div class="pm-table-row"><div class="pm-tr-name">Rahul Kumar</div><div class="pm-tr-dept">Finance</div><div class="pm-tr-status ok">Approved</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── IOT PLATFORM ── -->
+<section id="iot" class="dark-section">
+  <div class="container dark-inner">
+    <div class="sec-hd" style="margin-bottom:48px">
+      <div class="label label-teal">IoT Monitoring Platform</div>
+      <h2 class="heading sec-title" style="color:#fff">Real-Time IoT for Water Treatment Plants, Dams &amp; Smart Cities</h2>
+      <p class="sec-sub" style="color:rgba(212,226,252,.7)">End-to-end IoT platform development — from hardware sensor integration to cloud dashboards and mobile alerts. Built for critical infrastructure that cannot afford downtime.</p>
+    </div>
+
+    <!-- Live dashboard mockup -->
+    <div class="iot-screen" style="margin-bottom:48px">
+      <div class="iot-screen-title">Water Treatment Plant — Real-Time Monitor Dashboard</div>
+      <div class="iot-metrics">
+        <div class="iot-m"><div class="iot-m-val" style="color:#4ADE80">7.2 pH</div><div class="iot-m-lbl">Water pH</div></div>
+        <div class="iot-m"><div class="iot-m-val" style="color:#60A5FA">124 NTU</div><div class="iot-m-lbl">Turbidity</div></div>
+        <div class="iot-m"><div class="iot-m-val" style="color:#8FDDB8">42°C</div><div class="iot-m-lbl">Pump Temp</div></div>
+        <div class="iot-m"><div class="iot-m-val" style="color:#4ADE80">0.8 mg/L</div><div class="iot-m-lbl">Chlorine</div></div>
+        <div class="iot-m"><div class="iot-m-val" style="color:#FACC15">78%</div><div class="iot-m-lbl">Tank Level</div></div>
+      </div>
+      <svg width="100%" height="52" viewBox="0 0 600 52" preserveAspectRatio="none">
+        <defs><linearGradient id="cg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#4ADE80" stop-opacity=".35"/><stop offset="100%" stop-color="#4ADE80" stop-opacity="0"/></linearGradient></defs>
+        <path d="M0 38 C40 33,80 26,120 28 C160 30,200 40,240 36 C280 32,320 20,360 24 C400 28,440 36,480 30 C520 24,560 26,600 22" stroke="#4ADE80" stroke-width="2" fill="none"/>
+        <path d="M0 38 C40 33,80 26,120 28 C160 30,200 40,240 36 C280 32,320 20,360 24 C400 28,440 36,480 30 C520 24,560 26,600 22 L600 52 L0 52 Z" fill="url(#cg)"/>
+      </svg>
+      <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:7px;margin-top:10px">
+        <div class="iot-nd"><div class="nd-dot" style="background:#4ADE80"></div><div class="nd-lbl">Intake A</div></div>
+        <div class="iot-nd"><div class="nd-dot" style="background:#4ADE80"></div><div class="nd-lbl">Filter 1</div></div>
+        <div class="iot-nd"><div class="nd-dot" style="background:#4ADE80"></div><div class="nd-lbl">Filter 2</div></div>
+        <div class="iot-nd"><div class="nd-dot" style="background:#FACC15"></div><div class="nd-lbl">Pump 3</div></div>
+        <div class="iot-nd"><div class="nd-dot" style="background:#4ADE80"></div><div class="nd-lbl">Reservoir</div></div>
+        <div class="iot-nd"><div class="nd-dot" style="background:#4ADE80"></div><div class="nd-lbl">Outlet</div></div>
+      </div>
+    </div>
+
+    <!-- 3 IoT products -->
+    <div class="g3">
+      <div class="iot-card" style="border-color:rgba(74,222,128,.2)">
+        <div class="iot-icon" style="background:rgba(74,222,128,.12)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="iot-card-name">Water Treatment Plant IoT</div>
+        <div class="iot-card-desc">pH, turbidity, chlorine, dissolved oxygen, flow rate — all sensors integrated. Real-time dashboard, SMS/email alerts, and automatic shut-off triggers for out-of-range values.</div>
+        <div class="iot-tags"><span class="iot-tag">pH Sensor</span><span class="iot-tag">Flow Meter</span><span class="iot-tag">SCADA</span><span class="iot-tag">Auto Alerts</span><span class="iot-tag">Cloud Dashboard</span></div>
+      </div>
+      <div class="iot-card" style="border-color:rgba(96,165,250,.2)">
+        <div class="iot-icon" style="background:rgba(96,165,250,.12)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <div class="iot-card-name">Dam Safety Monitoring</div>
+        <div class="iot-card-desc">Water level sensors, piezometers, seismic monitors, crack gauges — all connected to a central dashboard. Automated early warning system with CWC-compatible data formats.</div>
+        <div class="iot-tags"><span class="iot-tag">Water Level</span><span class="iot-tag">Seismic</span><span class="iot-tag">Piezometer</span><span class="iot-tag">CWC Format</span><span class="iot-tag">Early Warning</span></div>
+      </div>
+      <div class="iot-card" style="border-color:rgba(167,139,250,.2)">
+        <div class="iot-icon" style="background:rgba(167,139,250,.12)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <div class="iot-card-name">Smart City Platform</div>
+        <div class="iot-card-desc">Street lighting control, waste bin monitoring, air quality sensors, traffic counters, and public surveillance integration — unified on one city operations dashboard.</div>
+        <div class="iot-tags"><span class="iot-tag">Street Lighting</span><span class="iot-tag">Air Quality</span><span class="iot-tag">Traffic</span><span class="iot-tag">City Dashboard</span></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:36px">
+      <a href="contact.html" class="btn btn-teal">Request IoT Platform Demo</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── VPN SETUP ── -->
+<section id="vpn" class="svc-section">
+  <div class="container">
+    <div class="svc-inner">
+      <div>
+        <div class="svc-label" style="color:var(--accent)">VPN Setup &amp; Network Security</div>
+        <h2 class="svc-h">Secure VPN Infrastructure for Critical Facilities</h2>
+        <p class="svc-p">We design and deploy site-to-site VPN networks for dam control rooms, WTP operations centres, remote plant monitoring, and government/municipal infrastructure — with encrypted tunnels and proper firewall rules.</p>
+        <div class="svc-feats">
+          <div class="sf sf-navy"><div class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><div class="sf-text"><strong>Site-to-Site VPN</strong> — Encrypted tunnel between control room and remote field sensors. Works over 4G/LTE or broadband.</div></div>
+          <div class="sf sf-navy"><div class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><div class="sf-text"><strong>Remote Access VPN</strong> — Engineers and operators securely log in to plant dashboards from anywhere.</div></div>
+          <div class="sf sf-navy"><div class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><div class="sf-text"><strong>Firewall Configuration</strong> — pfSense / Fortinet / Cisco setups with proper ACLs, NAT, and port-forwarding rules.</div></div>
+          <div class="sf sf-navy"><div class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><div class="sf-text"><strong>SCADA &amp; IoT Network Segmentation</strong> — Isolate OT (Operational Technology) network from IT network for security.</div></div>
+          <div class="sf sf-navy"><div class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><div class="sf-text"><strong>Multi-Site Connectivity</strong> — Connect dam site, WTP control room, district headquarters, and head office on one private network.</div></div>
+        </div>
+        <div class="svc-btns"><a href="contact.html" class="btn btn-acc">Discuss VPN Requirements</a></div>
+        <div class="card-tags" style="margin-top:20px">
+          <span class="tag tag-navy">OpenVPN</span><span class="tag tag-navy">WireGuard</span><span class="tag tag-navy">pfSense</span><span class="tag tag-navy">Fortinet</span><span class="tag tag-navy">Cisco</span><span class="tag tag-navy">MPLS</span>
+        </div>
+      </div>
+      <div>
+        <!-- VPN Network Diagram (SVG) -->
+        <div style="background:var(--navy-d);border-radius:16px;padding:28px;border:1px solid rgba(255,255,255,.1)">
+          <div style="font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(212,226,252,.35);margin-bottom:18px">VPN Network Architecture</div>
+          <svg viewBox="0 0 360 220" width="100%" xmlns="http://www.w3.org/2000/svg">
+            <!-- Central node -->
+            <rect x="140" y="88" width="80" height="44" rx="10" fill="rgba(31,107,74,.5)" stroke="rgba(31,107,74,.8)" stroke-width="1.5"/>
+            <text x="180" y="108" font-family="DM Sans,sans-serif" font-size="8" font-weight="600" fill="#fff" text-anchor="middle">Head Office</text>
+            <text x="180" y="120" font-family="DM Sans,sans-serif" font-size="6.5" fill="rgba(212,226,252,.5)" text-anchor="middle">VPN Hub</text>
+            <!-- WTP node -->
+            <rect x="14" y="14" width="76" height="40" rx="8" fill="rgba(14,124,107,.25)" stroke="rgba(14,124,107,.6)" stroke-width="1.5"/>
+            <text x="52" y="32" font-family="DM Sans,sans-serif" font-size="7.5" font-weight="600" fill="#fff" text-anchor="middle">WTP Control</text>
+            <text x="52" y="44" font-family="DM Sans,sans-serif" font-size="6" fill="rgba(212,226,252,.45)" text-anchor="middle">Room</text>
+            <!-- Dam node -->
+            <rect x="270" y="14" width="76" height="40" rx="8" fill="rgba(96,165,250,.18)" stroke="rgba(96,165,250,.5)" stroke-width="1.5"/>
+            <text x="308" y="32" font-family="DM Sans,sans-serif" font-size="7.5" font-weight="600" fill="#fff" text-anchor="middle">Dam Site</text>
+            <text x="308" y="44" font-family="DM Sans,sans-serif" font-size="6" fill="rgba(212,226,252,.45)" text-anchor="middle">Sensors</text>
+            <!-- Smart City node -->
+            <rect x="14" y="166" width="76" height="40" rx="8" fill="rgba(167,139,250,.18)" stroke="rgba(167,139,250,.5)" stroke-width="1.5"/>
+            <text x="52" y="184" font-family="DM Sans,sans-serif" font-size="7.5" font-weight="600" fill="#fff" text-anchor="middle">Smart City</text>
+            <text x="52" y="196" font-family="DM Sans,sans-serif" font-size="6" fill="rgba(212,226,252,.45)" text-anchor="middle">Ops Centre</text>
+            <!-- Field node -->
+            <rect x="270" y="166" width="76" height="40" rx="8" fill="rgba(20,92,66,.18)" stroke="rgba(20,92,66,.5)" stroke-width="1.5"/>
+            <text x="308" y="184" font-family="DM Sans,sans-serif" font-size="7.5" font-weight="600" fill="#fff" text-anchor="middle">Field</text>
+            <text x="308" y="196" font-family="DM Sans,sans-serif" font-size="6" fill="rgba(212,226,252,.45)" text-anchor="middle">Engineers</text>
+            <!-- Encrypted connections -->
+            <line x1="90" y1="34" x2="140" y2="100" stroke="rgba(74,222,128,.5)" stroke-width="1.5" stroke-dasharray="5,3"/>
+            <line x1="270" y1="34" x2="220" y2="100" stroke="rgba(74,222,128,.5)" stroke-width="1.5" stroke-dasharray="5,3"/>
+            <line x1="90" y1="186" x2="140" y2="115" stroke="rgba(74,222,128,.5)" stroke-width="1.5" stroke-dasharray="5,3"/>
+            <line x1="270" y1="186" x2="220" y2="115" stroke="rgba(74,222,128,.5)" stroke-width="1.5" stroke-dasharray="5,3"/>
+            <!-- Lock icons on lines -->
+            <circle cx="115" cy="67" r="6" fill="rgba(74,222,128,.15)" stroke="rgba(74,222,128,.4)" stroke-width="1"/>
+            <text x="115" y="70" font-size="6" fill="#4ADE80" text-anchor="middle">🔒</text>
+            <circle cx="245" cy="67" r="6" fill="rgba(74,222,128,.15)" stroke="rgba(74,222,128,.4)" stroke-width="1"/>
+            <text x="245" y="70" font-size="6" fill="#4ADE80" text-anchor="middle">🔒</text>
+            <circle cx="115" cy="151" r="6" fill="rgba(74,222,128,.15)" stroke="rgba(74,222,128,.4)" stroke-width="1"/>
+            <text x="115" y="154" font-size="6" fill="#4ADE80" text-anchor="middle">🔒</text>
+            <circle cx="245" cy="151" r="6" fill="rgba(74,222,128,.15)" stroke="rgba(74,222,128,.4)" stroke-width="1"/>
+            <text x="245" y="154" font-size="6" fill="#4ADE80" text-anchor="middle">🔒</text>
+          </svg>
+          <div style="font-size:.68rem;color:rgba(212,226,252,.35);text-align:center;margin-top:8px">All connections encrypted · Zero trust architecture</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── MOBILE + ERP ── -->
+<section id="mobile" class="svc-section bg-alt">
+  <div class="container">
+    <div class="g2" style="gap:32px">
+      <div class="card c-teal">
+        <div class="card-icon ci-teal"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+        <div id="mobile" class="card-name">Mobile App Development</div>
+        <div class="card-desc">Android and iOS apps for field operations, IoT device control, employee attendance, HR self-service, and customer-facing applications.</div>
+        <div class="svc-feats" style="margin-top:14px">
+          <div class="sf sf-teal"><div class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><div class="sf-text">Field operator apps for WTP / Dam readings</div></div>
+          <div class="sf sf-teal"><div class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><div class="sf-text">Employee self-service: leave, payslip, attendance</div></div>
+          <div class="sf sf-teal"><div class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><div class="sf-text">IoT sensor dashboard app with push alerts</div></div>
+          <div class="sf sf-teal"><div class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><div class="sf-text">Customer-facing e-commerce and service apps</div></div>
+        </div>
+        <div class="card-tags" style="margin-top:14px"><span class="tag tag-teal">React Native</span><span class="tag tag-teal">Flutter</span><span class="tag tag-teal">Android</span><span class="tag tag-teal">iOS</span></div>
+      </div>
+      <div id="erp" class="card c-navy">
+        <div class="card-icon ci-navy"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <div class="card-name">ERP &amp; System Integration</div>
+        <div class="card-desc">Connect your HRMS, ERP, IoT sensors, and third-party APIs into a unified system. Custom middleware, REST APIs, and webhook integrations for seamless data flow.</div>
+        <div class="svc-feats" style="margin-top:14px">
+          <div class="sf sf-navy"><div class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><div class="sf-text">SAP / Oracle / Tally integration</div></div>
+          <div class="sf sf-navy"><div class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><div class="sf-text">IoT sensor → ERP data pipeline</div></div>
+          <div class="sf sf-navy"><div class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><div class="sf-text">GST &amp; compliance reporting automation</div></div>
+          <div class="sf sf-navy"><div class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg></div><div class="sf-text">Custom REST APIs for third-party connectors</div></div>
+        </div>
+        <div class="card-tags" style="margin-top:14px"><span class="tag tag-navy">REST API</span><span class="tag tag-navy">SAP</span><span class="tag tag-navy">Tally</span><span class="tag tag-navy">Webhooks</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="container">
+    <div class="cta-content">
+      <h2 class="cta-title">Ready to Build Your Digital Solution?</h2>
+      <p class="cta-sub">Tell us what you need — website, portal, IoT platform, or VPN — and we'll respond with a detailed proposal within 24 hours.</p>
+      <div class="cta-btns">
+        <a href="contact.html" class="btn btn-wh">Start a Project</a>
+        <a href="tel:+917983116873" class="btn btn-owh">IT Services: +91 7983116873</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="ft-grid">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px">
+          <img src="assets/logo-light.png" class="nav-logo-img" alt="KS Workforce Solutions" width="36" height="36">
+          <div class="ft-name">KS Workforce Solutions<span>Workforce · HR · Technology</span></div>
+        </div>
+        <p class="ft-tag">New Delhi · IT Services · Manpower · HR Consultancy</p>
+        <div class="ft-contact">
+          <a href="tel:+918707777541">📞 +91 870 777 7541</a>
+          <a href="mailto:info@ksworkforcesolutions.com">✉ info@ksworkforcesolutions.com</a>
+        </div>
+      </div>
+      <div><div class="ft-col-h">IT Services</div><ul class="ft-links"><li><a href="#website">Website Development</a></li><li><a href="#portals">Custom Portals</a></li><li><a href="#iot">IoT Platforms</a></li><li><a href="#vpn">VPN Setup</a></li><li><a href="#mobile">Mobile Apps</a></li></ul></div>
+      <div><div class="ft-col-h">Other Services</div><ul class="ft-links"><li><a href="manpower.html">Manpower Supply</a></li><li><a href="hr.html">HR Consultancy</a></li><li><a href="industries.html">Industries</a></li><li><a href="locations.html">Locations</a></li></ul></div>
+      <div><div class="ft-col-h">Industries</div><ul class="ft-links"><li><a href="industries/it.html">Information Technology</a></li><li><a href="industries/manufacturing.html">Manufacturing</a></li><li><a href="industries/healthcare.html">Healthcare</a></li><li><a href="industries/electronics-iot.html">Electronics &amp; IoT</a></li></ul></div>
+      <div><div class="ft-col-h">Company</div><ul class="ft-links"><li><a href="index.html">Home</a></li><li><a href="contact.html">Contact Us</a></li><li><a href="contact.html">Privacy Policy</a></li></ul></div>
+    </div>
+    <div class="ft-bottom">
+      <div class="ft-copy">© 2026 KS Workforce Solutions, New Delhi. All rights reserved.</div>
+      <div class="ft-legal"><a href="contact.html">Privacy</a><a href="contact.html">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<div id="progress-bar"></div>
+<script>
+const ham=document.getElementById('ham'),mob=document.getElementById('mobNav');
+ham.addEventListener('click',()=>{ham.classList.toggle('open');mob.classList.toggle('open');});
+function animCtr(el){const t=+el.dataset.t,d=1400,s=performance.now();const tick=n=>{const p=Math.min((n-s)/d,1),e=1-Math.pow(1-p,3);el.textContent=Math.round(e*t).toLocaleString('en-IN');if(p<1)requestAnimationFrame(tick);};requestAnimationFrame(tick);}
+const ctrObs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){animCtr(e.target);ctrObs.unobserve(e.target);}}),{threshold:.5});
+document.querySelectorAll('.ctr').forEach(c=>ctrObs.observe(c));
+document.querySelectorAll('.tn-item').forEach(a=>{a.addEventListener('click',()=>{document.querySelectorAll('.tn-item').forEach(x=>x.classList.remove('active'));a.classList.add('active');});});
+// Scroll reveal
+const revObs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('revealed');revObs.unobserve(e.target);}}),{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
+// Progress bar
+const pb=document.getElementById('progress-bar');
+document.addEventListener('scroll',()=>{const h=document.documentElement;pb.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';},{passive:true});
+// Nav scroll
+document.querySelector('.nav').addEventListener&&window.addEventListener('scroll',()=>{document.querySelector('.nav').classList.toggle('scrolled',scrollY>20);},{passive:true});
+// Live IoT node flicker
+document.querySelectorAll('.nd-dot[style*="#4ADE80"]').forEach((d,i)=>{d.classList.add('live');d.style.animationDelay=(i*0.4)+'s';});
+</script>
+</body>
+</html>

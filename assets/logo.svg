@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1B4FA0"/>
+      <stop offset="100%" stop-color="#04173D"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E8C583"/>
+      <stop offset="100%" stop-color="#C9973A"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Rounded square background with gradient -->
+  <rect width="40" height="40" rx="10" fill="url(#bg)"/>
+  <!-- Subtle inner highlight top-left -->
+  <ellipse cx="10" cy="7" rx="16" ry="10" fill="white" fill-opacity="0.07"/>
+
+  <!-- === K === clean geometric sans-serif -->
+  <!-- Vertical stem: 3.5×22 at (9,9) rounded -->
+  <rect x="9" y="9" width="3" height="22" rx="1.5" fill="white"/>
+  <!-- Upper arm: (11, 20) → (22, 9) - rounded caps -->
+  <line x1="11.5" y1="20" x2="22" y2="9.5" stroke="white" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Lower arm: (11, 20) → (22, 31) -->
+  <line x1="11.5" y1="20" x2="22" y2="30.5" stroke="white" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- === S === smooth orange curves -->
+  <!-- Top arc: top-right sweeping left -->
+  <path d="M32 12 C32 9 28.5 8 27 10 C25.5 12 27.5 15.5 30 17"
+        stroke="url(#accent)" stroke-width="3" stroke-linecap="round" fill="none" filter="url(#glow)"/>
+  <!-- Bottom arc: connecting to bottom -->
+  <path d="M29.5 17 C27 17.5 24.5 19 24.5 22 C24.5 25 26.5 27 29 27.5 C31 28 32.5 26.5 32.5 25"
+        stroke="url(#accent)" stroke-width="3" stroke-linecap="round" fill="none" filter="url(#glow)"/>
+
+  <!-- Accent dot — top right -->
+  <circle cx="36" cy="6.5" r="2.8" fill="#E8C583" opacity="0.9"/>
+  <!-- Tiny connector dot between K arms at midpoint -->
+  <circle cx="11.5" cy="20" r="2" fill="white"/>
+</svg>

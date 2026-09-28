@@ -1,0 +1,184 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Locations — KS Workforce Solutions | Pan-India Staffing & IT Services</title>
+<meta name="description" content="KS Workforce Solutions serves New Delhi, Mumbai, Bengaluru, Hyderabad, Chennai, Pune, Kolkata, Ahmedabad. Manpower supply and IT services across India.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.loc-hero{background:var(--bg);padding-block:clamp(36px,5vw,60px);position:relative;overflow:hidden;border-bottom:1px solid var(--bdr)}
+.loc-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 50% 60%,rgba(31,107,74,.10) 0%,transparent 60%)}
+.loc-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(14,56,48,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(14,56,48,.035) 1px,transparent 1px);background-size:48px 48px}
+.city-section{padding-block:clamp(52px,6vw,80px);border-bottom:1px solid var(--bdr)}
+.city-section:last-of-type{border-bottom:none}
+.city-inner{display:grid;grid-template-columns:260px 1fr;gap:48px;align-items:start}
+.city-info{background:var(--surface);border:1px solid var(--bdr);border-radius:16px;padding:24px;position:sticky;top:80px}
+.city-name{font-family:'Fraunces',Georgia,serif;font-size:1.4rem;font-weight:700;color:var(--text);margin-bottom:3px}
+.city-state{font-size:.78rem;color:var(--t3);margin-bottom:14px}
+.city-hq-badge{display:inline-flex;align-items:center;gap:5px;background:var(--acc-l);border:1px solid rgba(20,92,66,.2);color:var(--accent);font-size:.65rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:5px;margin-bottom:10px}
+.city-svcs{display:flex;flex-direction:column;gap:6px;margin-top:12px}
+.city-svc{font-size:.8rem;color:var(--t2);display:flex;align-items:center;gap:7px}
+.city-svc::before{content:'→';color:var(--navy);font-weight:600}
+.city-details{padding-top:4px}
+.city-h{font-family:'Fraunces',Georgia,serif;font-size:1.15rem;font-weight:600;color:var(--text);margin-bottom:10px}
+.city-p{font-size:.88rem;color:var(--t2);line-height:1.72;margin-bottom:16px}
+.city-roles-h{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--t3);margin-bottom:8px}
+@media(max-width:800px){.city-inner{grid-template-columns:1fr}.city-info{position:static}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><img src="assets/logo.png" class="nav-logo-img" alt="KS Workforce Solutions" width="36" height="36"><div class="logo-name">KS Workforce Solutions<span>New Delhi · Workforce · HR · Technology</span></div></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li><li><a href="manpower.html">Manpower</a></li><li><a href="technology.html">IT Services</a></li><li><a href="hr.html">HR</a></li><li><a href="industries.html">Industries</a></li><li><a href="locations.html" class="active">Locations</a></li><li><a href="contact.html">Contact</a></li>
+        <li><a href="tel:+918707777541" class="nav-cta">+91 870 777 7541</a></li>
+      </ul>
+      <button class="ham" id="ham"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mob-nav" id="mobNav">
+    <a href="manpower.html">Manpower</a><a href="technology.html">IT Services</a><a href="hr.html">HR</a><a href="industries.html">Industries</a><a href="locations.html">Locations</a><a href="contact.html">Contact</a>
+    <a href="tel:+918707777541" class="mob-cta">Call: +91 870 777 7541</a>
+  </div>
+</nav>
+
+<div class="loc-hero">
+  <div class="loc-hero-grid"></div>
+  <img src="assets/logo.png" class="hero-logo-mark" alt="" aria-hidden="true">
+  <div class="container" style="position:relative;z-index:2">
+    <div class="page-hero-badge">Pan-India Coverage</div>
+    <h1 style="font-family:'Fraunces',Georgia,serif;font-size:clamp(2rem,3.8vw,3rem);font-weight:700;color:var(--text);margin-bottom:14px;text-wrap:balance">Serving Businesses Across <em style="font-style:normal;color:var(--accent)">India's Major Cities</em></h1>
+    <p style="font-size:.97rem;color:var(--t2);max-width:560px;line-height:1.75">Headquartered in New Delhi, with active recruitment networks and client relationships in 8 major cities. Wherever you are, we can deliver.</p>
+  </div>
+</div>
+
+<!-- Overview grid -->
+<section class="section" style="background:var(--navy-d);padding-block:48px">
+  <div class="container">
+    <div class="loc-grid">
+      <div class="loc-card hq"><div class="loc-dot"></div><div class="loc-city">New Delhi NCR</div><div class="loc-state">Headquarters · Delhi</div><div class="loc-svcs"><span class="loc-svc">Head Office</span><span class="loc-svc">All Services</span></div></div>
+      <div class="loc-card"><div class="loc-dot"></div><div class="loc-city">Mumbai</div><div class="loc-state">Maharashtra</div><div class="loc-svcs"><span class="loc-svc">IT Staffing</span><span class="loc-svc">Finance</span></div></div>
+      <div class="loc-card"><div class="loc-dot"></div><div class="loc-city">Bengaluru</div><div class="loc-state">Karnataka</div><div class="loc-svcs"><span class="loc-svc">IT</span><span class="loc-svc">IoT</span><span class="loc-svc">Startups</span></div></div>
+      <div class="loc-card"><div class="loc-dot"></div><div class="loc-city">Hyderabad</div><div class="loc-state">Telangana</div><div class="loc-svcs"><span class="loc-svc">IT</span><span class="loc-svc">Pharma</span></div></div>
+      <div class="loc-card"><div class="loc-dot"></div><div class="loc-city">Chennai</div><div class="loc-state">Tamil Nadu</div><div class="loc-svcs"><span class="loc-svc">Manufacturing</span><span class="loc-svc">Auto</span></div></div>
+      <div class="loc-card"><div class="loc-dot"></div><div class="loc-city">Pune</div><div class="loc-state">Maharashtra</div><div class="loc-svcs"><span class="loc-svc">Auto / Mfg</span><span class="loc-svc">IT</span></div></div>
+      <div class="loc-card"><div class="loc-dot"></div><div class="loc-city">Kolkata</div><div class="loc-state">West Bengal</div><div class="loc-svcs"><span class="loc-svc">Logistics</span><span class="loc-svc">Finance</span></div></div>
+      <div class="loc-card"><div class="loc-dot"></div><div class="loc-city">Ahmedabad</div><div class="loc-state">Gujarat</div><div class="loc-svcs"><span class="loc-svc">Manufacturing</span><span class="loc-svc">SME HR</span></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+<!-- DELHI -->
+<div class="city-section" id="delhi">
+  <div class="city-inner">
+    <div class="city-info">
+      <div class="city-hq-badge">Headquarters</div>
+      <div class="city-name">New Delhi NCR</div>
+      <div class="city-state">Delhi, India</div>
+      <div class="city-svcs">
+        <div class="city-svc">All Manpower Services</div>
+        <div class="city-svc">IT &amp; Technology Projects</div>
+        <div class="city-svc">HR Consultancy</div>
+        <div class="city-svc">IoT Platforms</div>
+        <div class="city-svc">VPN Infrastructure</div>
+      </div>
+    </div>
+    <div class="city-details">
+      <h2 class="city-h">Manpower Supply &amp; IT Services — New Delhi NCR</h2>
+      <p class="city-p">KS Workforce Solutions is headquartered in New Delhi. We serve clients across Delhi, Noida, Gurgaon, Faridabad, and Ghaziabad — the entire NCR region. As the national capital and home to India's largest concentration of IT companies, government offices, manufacturing units, and corporate headquarters, Delhi NCR is our primary base for all service lines.</p>
+      <p class="city-p">We supply IT professionals to tech parks in Noida and Gurgaon, manufacturing staff to Faridabad and Manesar industrial areas, and HR consultancy services to the thousands of small businesses and startups that call Delhi NCR home.</p>
+      <div class="city-roles-h">Top Roles We Place in Delhi NCR</div>
+      <div class="roles-wrap">
+        <span class="role-pill">Software Developers</span><span class="role-pill">DevOps Engineers</span><span class="role-pill">CNC Operators</span><span class="role-pill">Finance Analysts</span><span class="role-pill">HR Executives</span><span class="role-pill">Sales Managers</span><span class="role-pill">IT Support Staff</span><span class="role-pill">QA Testers</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MUMBAI -->
+<div class="city-section" id="mumbai">
+  <div class="city-inner">
+    <div class="city-info">
+      <div class="city-name">Mumbai</div><div class="city-state">Maharashtra</div>
+      <div class="city-svcs"><div class="city-svc">IT Staffing</div><div class="city-svc">Finance &amp; BFSI</div><div class="city-svc">HR Consultancy</div><div class="city-svc">Tech Projects</div></div>
+    </div>
+    <div class="city-details">
+      <h2 class="city-h">Manpower Supply &amp; IT Services — Mumbai</h2>
+      <p class="city-p">Mumbai is India's financial capital and home to the country's largest concentration of banking, financial services, insurance, and fintech companies. KS Workforce Solutions serves Mumbai-based companies with IT staffing across BKC, Andheri, and Powai tech hubs, as well as BFSI professionals for banks and NBFCs in the Fort and Nariman Point business district.</p>
+      <div class="city-roles-h">Top Roles in Mumbai</div>
+      <div class="roles-wrap"><span class="role-pill">Credit Analysts</span><span class="role-pill">Full Stack Developers</span><span class="role-pill">Risk Officers</span><span class="role-pill">UI/UX Designers</span><span class="role-pill">Compliance Officers</span><span class="role-pill">Data Scientists</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- BENGALURU -->
+<div class="city-section" id="bengaluru">
+  <div class="city-inner">
+    <div class="city-info">
+      <div class="city-name">Bengaluru</div><div class="city-state">Karnataka</div>
+      <div class="city-svcs"><div class="city-svc">IT Staffing</div><div class="city-svc">Startup HR</div><div class="city-svc">IoT Engineering</div><div class="city-svc">Tech Projects</div></div>
+    </div>
+    <div class="city-details">
+      <h2 class="city-h">Manpower Supply &amp; IT Services — Bengaluru</h2>
+      <p class="city-p">India's Silicon Valley. KS Workforce Solutions serves Bengaluru's massive tech ecosystem — from product startups in Koramangala to IT services companies in Electronic City and Whitefield. We also specialise in IoT and embedded systems staffing for Bengaluru's growing hardware startups and semiconductor companies.</p>
+      <div class="city-roles-h">Top Roles in Bengaluru</div>
+      <div class="roles-wrap"><span class="role-pill">Backend Engineers</span><span class="role-pill">React Developers</span><span class="role-pill">ML Engineers</span><span class="role-pill">Cloud Architects</span><span class="role-pill">Embedded Engineers</span><span class="role-pill">Product Managers</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- CHENNAI -->
+<div class="city-section" id="chennai">
+  <div class="city-inner">
+    <div class="city-info">
+      <div class="city-name">Chennai</div><div class="city-state">Tamil Nadu</div>
+      <div class="city-svcs"><div class="city-svc">Manufacturing Manpower</div><div class="city-svc">Automotive Staffing</div><div class="city-svc">IT Services</div></div>
+    </div>
+    <div class="city-details">
+      <h2 class="city-h">Manpower Supply — Chennai</h2>
+      <p class="city-p">Chennai is India's automotive capital — home to manufacturing plants of Ford, Hyundai, BMW, Ashok Leyland, and dozens of Tier-1 auto component suppliers. KS Workforce Solutions supplies CNC operators, quality inspectors, maintenance engineers, and production supervisors to Chennai's industrial corridors at Sriperumbudur, Ambattur, and Manali.</p>
+      <div class="city-roles-h">Top Roles in Chennai</div>
+      <div class="roles-wrap"><span class="role-pill">CNC Operators</span><span class="role-pill">QC Inspectors</span><span class="role-pill">Maintenance Engineers</span><span class="role-pill">Production Supervisors</span><span class="role-pill">IT Support</span></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<section class="cta-band">
+  <div class="container">
+    <div class="cta-content">
+      <h2 class="cta-title">Not in the List? We Cover All of India.</h2>
+      <p class="cta-sub">Tell us your city and requirement — we'll confirm coverage and begin immediately.</p>
+      <div class="cta-btns">
+        <a href="contact.html" class="btn btn-wh">Contact Us</a>
+        <a href="tel:+918707777541" class="btn btn-owh">Call +91 870 777 7541</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="ft-grid">
+      <div><div style="display:flex;align-items:center;gap:10px"><img src="assets/logo-light.png" class="nav-logo-img" alt="KS Workforce Solutions" width="36" height="36"><div class="ft-name">KS Workforce Solutions<span>Workforce · HR · Technology</span></div></div><p class="ft-tag">New Delhi HQ · Pan-India Service.</p><div class="ft-contact"><a href="tel:+918707777541">📞 +91 870 777 7541</a></div></div>
+      <div><div class="ft-col-h">Key Cities</div><ul class="ft-links"><li><a href="#delhi">New Delhi NCR</a></li><li><a href="#mumbai">Mumbai</a></li><li><a href="#bengaluru">Bengaluru</a></li><li><a href="#chennai">Chennai</a></li></ul></div>
+      <div><div class="ft-col-h">Services</div><ul class="ft-links"><li><a href="manpower.html">Manpower</a></li><li><a href="technology.html">IT Services</a></li><li><a href="hr.html">HR</a></li></ul></div>
+      <div><div class="ft-col-h">Company</div><ul class="ft-links"><li><a href="industries.html">Industries</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div></div>
+    </div>
+    <div class="ft-bottom"><div class="ft-copy">© 2026 KS Workforce Solutions, New Delhi.</div><div class="ft-legal"><a href="contact.html">Privacy</a></div></div>
+  </div>
+</footer>
+<script>
+const ham=document.getElementById('ham'),mob=document.getElementById('mobNav');
+ham.addEventListener('click',()=>{ham.classList.toggle('open');mob.classList.toggle('open');});
+</script>
+</body>
+</html>
