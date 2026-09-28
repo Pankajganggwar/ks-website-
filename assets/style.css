@@ -442,3 +442,23 @@ footer .ft-grid>*,footer .ft-bottom{position:relative;z-index:1}
 footer .nav-logo-img{width:84px;height:84px;box-shadow:0 0 0 3px rgba(216,196,160,.35),0 8px 24px rgba(0,0,0,.25)}
 .hero-logo-mark{border-radius:50%;width:clamp(120px,13vw,190px);opacity:1;box-shadow:0 12px 34px rgba(18,61,43,.16);filter:none}
 .nav-logo-img{width:60px;height:60px}
+
+/* ─── LEAF MOTIF: header + main page ─── */
+.nav{background:url('leaf-pattern-green.svg') 0 0/200px 200px repeat,var(--surface);border-bottom:1px solid var(--champ)}
+.nav::after{content:'';position:absolute;left:0;right:0;bottom:-1px;height:2px;background:linear-gradient(90deg,transparent,var(--champ),var(--ring),var(--champ),transparent);pointer-events:none}
+.nav-logo{position:relative}
+.nav-logo::after{content:'';position:absolute;left:44px;top:-2px;width:16px;height:16px;border-radius:0 70% 0 70%;background:linear-gradient(135deg,#3E8A62,#1B5A3C);transform:rotate(-25deg);box-shadow:0 2px 6px rgba(18,61,43,.25);pointer-events:none}
+.nav-links a.active{position:relative}
+.nav-links a.active::after{content:'';position:absolute;left:50%;bottom:-3px;width:8px;height:8px;margin-left:-4px;border-radius:0 70% 0 70%;background:var(--accent);transform:rotate(-12deg)}
+.sec-hd .sec-title::after{width:120px;height:20px;margin:14px auto 0;background:url('leaf-divider.svg') center/contain no-repeat;border-radius:0}
+.leafy{position:relative;overflow:hidden}
+.leafy>.container{position:relative;z-index:1}
+.leaf-deco{position:absolute;pointer-events:none;z-index:0;background:url('footer-leaf.svg') center/contain no-repeat;aspect-ratio:1}
+.leaf-deco.ld-br{right:-40px;bottom:-30px;width:clamp(180px,22vw,320px);opacity:.35}
+.leaf-deco.ld-tl{left:-50px;top:-30px;width:clamp(150px,17vw,250px);opacity:.25;transform:scaleX(-1) rotate(160deg)}
+.leaf-deco.ld-tr{right:-40px;top:-40px;width:clamp(140px,15vw,220px);opacity:.25;transform:rotate(180deg) scaleX(-1)}
+.leaf-deco.ld-bl{left:-40px;bottom:-30px;width:clamp(150px,17vw,240px);opacity:.28;transform:scaleX(-1)}
+.leaf-float{position:absolute;pointer-events:none;z-index:0;width:22px;height:22px;border-radius:0 70% 0 70%;background:linear-gradient(135deg,#3E8A62,#1B5A3C);opacity:.18;animation:leafDrift 9s ease-in-out infinite}
+@keyframes leafDrift{0%,100%{transform:translateY(0) rotate(-20deg)}50%{transform:translateY(-14px) rotate(10deg)}}
+@media(prefers-reduced-motion:reduce){.leaf-float{animation:none}}
+@media(max-width:760px){.leaf-deco.ld-tl,.leaf-deco.ld-tr{display:none}.nav-logo::after{display:none}}
